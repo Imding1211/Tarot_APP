@@ -23,8 +23,6 @@
 		03D828A72A966F75009AB1CA /* ThreeCardBackImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D828A62A966F75009AB1CA /* ThreeCardBackImage.swift */; };
 		03D828A92A9672E3009AB1CA /* ThreeCardDrawImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D828A82A9672E3009AB1CA /* ThreeCardDrawImage.swift */; };
 		03D828AB2A97ADCA009AB1CA /* ThreeCardSpreadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D828AA2A97ADCA009AB1CA /* ThreeCardSpreadImage.swift */; };
-		03D828AD2A999384009AB1CA /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D828AC2A999384009AB1CA /* test.swift */; };
-		03D828B22A9B32F5009AB1CA /* test2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D828B12A9B32F5009AB1CA /* test2.swift */; };
 		03DFCBC62A8460B600768C2E /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DFCBC52A8460B600768C2E /* SwiftUIView.swift */; };
 		03DFCBC82A853B9600768C2E /* DailyCardButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DFCBC72A853B9600768C2E /* DailyCardButtonLabel.swift */; };
 		03DFCBCA2A85426000768C2E /* DailyCardTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DFCBC92A85426000768C2E /* DailyCardTitle.swift */; };
@@ -51,8 +49,6 @@
 		03D828A62A966F75009AB1CA /* ThreeCardBackImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeCardBackImage.swift; sourceTree = "<group>"; };
 		03D828A82A9672E3009AB1CA /* ThreeCardDrawImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeCardDrawImage.swift; sourceTree = "<group>"; };
 		03D828AA2A97ADCA009AB1CA /* ThreeCardSpreadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeCardSpreadImage.swift; sourceTree = "<group>"; };
-		03D828AC2A999384009AB1CA /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
-		03D828B12A9B32F5009AB1CA /* test2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test2.swift; sourceTree = "<group>"; };
 		03DFCBC52A8460B600768C2E /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		03DFCBC72A853B9600768C2E /* DailyCardButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCardButtonLabel.swift; sourceTree = "<group>"; };
 		03DFCBC92A85426000768C2E /* DailyCardTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCardTitle.swift; sourceTree = "<group>"; };
@@ -75,8 +71,6 @@
 		0387250F2A7E121100313140 = {
 			isa = PBXGroup;
 			children = (
-				03D828AC2A999384009AB1CA /* test.swift */,
-				03D828B12A9B32F5009AB1CA /* test2.swift */,
 				0387251A2A7E121100313140 /* Tarot */,
 				038725192A7E121100313140 /* Products */,
 			);
@@ -226,14 +220,12 @@
 				037145572A7E220700D33DEC /* CardData.swift in Sources */,
 				03DFCBCC2A85445C00768C2E /* DailyCardImage.swift in Sources */,
 				03D828A52A9189EC009AB1CA /* SplashScreenView.swift in Sources */,
-				03D828AD2A999384009AB1CA /* test.swift in Sources */,
 				03671A772A7F835700428A8B /* ShowCardView.swift in Sources */,
 				037145532A7E19A300D33DEC /* CardInfo.swift in Sources */,
 				03671A712A7F36DC00428A8B /* DailyCardView.swift in Sources */,
 				03D828A32A8E81C2009AB1CA /* ThreeCardSpreadText.swift in Sources */,
 				03D828AB2A97ADCA009AB1CA /* ThreeCardSpreadImage.swift in Sources */,
 				03DFCBD02A86939A00768C2E /* ShowCardKeyword.swift in Sources */,
-				03D828B22A9B32F5009AB1CA /* test2.swift in Sources */,
 				0387251C2A7E121100313140 /* TarotApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

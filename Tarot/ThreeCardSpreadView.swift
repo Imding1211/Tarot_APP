@@ -11,12 +11,7 @@ struct ThreeCardSpreadView: View {
     
     @Environment(\.colorScheme) var colorScheme
     
-    @State var pastCardArray: [Int] = [Int](0...156)
-    @State var presentCardArray: [Int] = [Int](0...156)
-    @State var futureCardArray: [Int] = [Int](0...156)
-    @State var pastCardIndex: Int = 0
-    @State var presentCardIndex: Int = 0
-    @State var futureCardIndex: Int = 0
+    @State var CardIDArray: [Int] = [Int](0...156).shuffled()
     @State var cardDatas: [CardInfo] = CardData().getData()
     @State var isDrawedPast: Bool = false
     @State var isDrawedPresent: Bool = false
@@ -38,12 +33,12 @@ struct ThreeCardSpreadView: View {
                     if !isAllDrawed {
                         HStack {
                             if isDrawedPast {
-                                VStack {
-                                    if pastCardIndex <= 78 {
-                                        ThreeCardDrawImage(imageName: cardDatas[pastCardArray[pastCardIndex]].imageName)
+                                VStack (spacing: 20) {
+                                    if CardIDArray[0] <= 78 {
+                                        ThreeCardDrawImage(imageName: cardDatas[CardIDArray[0]].imageName)
                                     }
-                                    else if pastCardIndex > 78 {
-                                        ThreeCardDrawImage(imageName: cardDatas[pastCardArray[pastCardIndex-78]].imageName)
+                                    else if CardIDArray[0] > 78 {
+                                        ThreeCardDrawImage(imageName: cardDatas[CardIDArray[0]-78].imageName)
                                             .rotationEffect(.degrees(180))
                                     }
                                     
@@ -53,12 +48,12 @@ struct ThreeCardSpreadView: View {
                             }
                             
                             if isDrawedPresent {
-                                VStack {
-                                    if presentCardIndex <= 78 {
-                                        ThreeCardDrawImage(imageName: cardDatas[presentCardArray[presentCardIndex]].imageName)
+                                VStack (spacing: 20) {
+                                    if CardIDArray[1] <= 78 {
+                                        ThreeCardDrawImage(imageName: cardDatas[CardIDArray[1]].imageName)
                                     }
-                                    else if presentCardIndex > 78 {
-                                        ThreeCardDrawImage(imageName: cardDatas[presentCardArray[presentCardIndex-78]].imageName)
+                                    else if CardIDArray[1] > 78 {
+                                        ThreeCardDrawImage(imageName: cardDatas[CardIDArray[1]-78].imageName)
                                             .rotationEffect(.degrees(180))
                                     }
                                     
@@ -67,12 +62,12 @@ struct ThreeCardSpreadView: View {
                             }
                             
                             if isDrawedFuture {
-                                VStack {
-                                    if futureCardIndex <= 78 {
-                                        ThreeCardDrawImage(imageName: cardDatas[futureCardArray[futureCardIndex]].imageName)
+                                VStack (spacing: 20) {
+                                    if CardIDArray[2] <= 78 {
+                                        ThreeCardDrawImage(imageName: cardDatas[CardIDArray[2]].imageName)
                                     }
-                                    else if futureCardIndex > 78 {
-                                        ThreeCardDrawImage(imageName: cardDatas[futureCardArray[futureCardIndex-78]].imageName)
+                                    else if CardIDArray[2] > 78 {
+                                        ThreeCardDrawImage(imageName: cardDatas[CardIDArray[2]-78].imageName)
                                             .rotationEffect(.degrees(180))
                                     }
                                     
@@ -89,11 +84,11 @@ struct ThreeCardSpreadView: View {
                             HStack {
                                 ThreeCardSpreadText(message: "Past")
                                 
-                                if pastCardIndex <= 78 {
-                                    ThreeCardSpreadImage(imageName: cardDatas[pastCardArray[pastCardIndex]].imageName)
+                                if CardIDArray[0] <= 78 {
+                                    ThreeCardSpreadImage(imageName: cardDatas[CardIDArray[0]].imageName)
                                 }
-                                else if pastCardIndex > 78 {
-                                    ThreeCardSpreadImage(imageName: cardDatas[pastCardArray[pastCardIndex-78]].imageName)
+                                else if CardIDArray[0] > 78 {
+                                    ThreeCardSpreadImage(imageName: cardDatas[CardIDArray[0]-78].imageName)
                                         .rotationEffect(.degrees(180))
                                 }
                             }
@@ -101,11 +96,11 @@ struct ThreeCardSpreadView: View {
                             HStack {
                                 ThreeCardSpreadText(message: "Present")
                                 
-                                if presentCardIndex <= 78 {
-                                    ThreeCardSpreadImage(imageName: cardDatas[presentCardArray[presentCardIndex]].imageName)
+                                if CardIDArray[1] <= 78 {
+                                    ThreeCardSpreadImage(imageName: cardDatas[CardIDArray[1]].imageName)
                                 }
-                                else if presentCardIndex > 78 {
-                                    ThreeCardSpreadImage(imageName: cardDatas[presentCardArray[presentCardIndex-78]].imageName)
+                                else if CardIDArray[1] > 78 {
+                                    ThreeCardSpreadImage(imageName: cardDatas[CardIDArray[1]-78].imageName)
                                         .rotationEffect(.degrees(180))
                                 }
                             }
@@ -113,11 +108,11 @@ struct ThreeCardSpreadView: View {
                             HStack {
                                 ThreeCardSpreadText(message: "Future")
                                 
-                                if futureCardIndex <= 78 {
-                                    ThreeCardSpreadImage(imageName: cardDatas[futureCardArray[futureCardIndex]].imageName)
+                                if CardIDArray[2] <= 78 {
+                                    ThreeCardSpreadImage(imageName: cardDatas[CardIDArray[2]].imageName)
                                 }
-                                else if futureCardIndex > 78 {
-                                    ThreeCardSpreadImage(imageName: cardDatas[futureCardArray[futureCardIndex-78]].imageName)
+                                else if CardIDArray[2] > 78 {
+                                    ThreeCardSpreadImage(imageName: cardDatas[CardIDArray[2]-78].imageName)
                                         .rotationEffect(.degrees(180))
                                 }
                             }
@@ -125,11 +120,11 @@ struct ThreeCardSpreadView: View {
                             Spacer()
                             
                             Button {
-                                isDrawedPast.toggle()
-                                isDrawedPresent.toggle()
-                                isDrawedFuture.toggle()
-                                isAllDrawed.toggle()
-                                shuffleCard()
+                                isDrawedPast = false
+                                isDrawedPresent = false
+                                isDrawedFuture = false
+                                isAllDrawed = false
+                                CardIDArray.shuffle()
                             } label: {
                                 DailyCardButtonLabel(message: "洗牌", iconName: "repeat")
                             }
@@ -149,10 +144,11 @@ struct ThreeCardSpreadView: View {
                             ThreeCardBackImage(imageName: "CardBacks", offSet: -10, isShow: isDrawedPresent)
                                 .onTapGesture {
                                     withAnimation {
-                                        futureCardIndex = Int.random(in: 1...154)
-                                        isDrawedFuture.toggle()
+                                        isDrawedFuture = true
                                         DispatchQueue.main.asyncAfter(deadline:  .now() + 0.5) {
-                                            isAllDrawed.toggle()
+                                            withAnimation {
+                                                isAllDrawed = true
+                                            }
                                         }
                                     }
                                 }
@@ -162,9 +158,7 @@ struct ThreeCardSpreadView: View {
                             ThreeCardBackImage(imageName: "CardBacks", offSet: -20, isShow: isDrawedPast)
                                 .onTapGesture {
                                     withAnimation {
-                                        presentCardIndex = Int.random(in: 1...155)
-                                        futureCardArray = presentCardArray.filter { $0 != presentCardIndex }
-                                        isDrawedPresent.toggle()
+                                        isDrawedPresent = true
                                     }
                                 }
                         }
@@ -173,13 +167,10 @@ struct ThreeCardSpreadView: View {
                             ThreeCardBackImage(imageName: "CardBacks", offSet: -30, isShow: true)
                                 .onTapGesture {
                                     withAnimation {
-                                        pastCardIndex = Int.random(in: 1...156)
-                                        presentCardArray = pastCardArray.filter { $0 != pastCardIndex }
-                                        isDrawedPast.toggle()
+                                        isDrawedPast = true
                                     }
                                 }
                         }
-                        
                     }
                     .padding()
                 }
@@ -188,19 +179,6 @@ struct ThreeCardSpreadView: View {
         }
         .accentColor(Color("MainColor"))
     }
-    
-    func shuffleCard() {
-        
-        pastCardArray    = [Int](0...156)
-        presentCardArray = [Int](0...156)
-        futureCardArray  = [Int](0...156)
-        
-        pastCardIndex    = 0
-        presentCardIndex = 0
-        futureCardIndex  = 0
-        
-    }
-    
 }
 
 struct ThreeCardSpreadView_Previews: PreviewProvider {

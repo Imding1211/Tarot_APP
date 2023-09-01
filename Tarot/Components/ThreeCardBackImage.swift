@@ -18,7 +18,7 @@ struct ThreeCardBackImage: View {
             .resizable()
             .cornerRadius(10)
             .aspectRatio(contentMode: .fit)
-            .frame(width: 250, height: 250)
+            .frame(width: 200, height: 200)
             .opacity(isShow ? 0.9 : 0.6)
             .shadow(color: .white, radius: 5)
             .offset(y:offSet)
