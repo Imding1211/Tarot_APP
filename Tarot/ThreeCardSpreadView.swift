@@ -11,7 +11,7 @@ struct ThreeCardSpreadView: View {
     
     @Environment(\.colorScheme) var colorScheme
     
-    @State var CardIDArray: [Int] = [Int](0...156).shuffled()
+    @State var CardIDArray: [Int] = [Int](1...156).shuffled()
     @State var cardDatas: [CardInfo] = CardData().getData()
     @State var isDrawedPast: Bool = false
     @State var isDrawedPresent: Bool = false
