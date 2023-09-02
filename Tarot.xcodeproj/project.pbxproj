@@ -14,7 +14,6 @@
 		037145532A7E19A300D33DEC /* CardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037145522A7E19A300D33DEC /* CardInfo.swift */; };
 		037145572A7E220700D33DEC /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037145562A7E220700D33DEC /* CardData.swift */; };
 		0387251C2A7E121100313140 /* TarotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0387251B2A7E121100313140 /* TarotApp.swift */; };
-		0387251E2A7E121100313140 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0387251D2A7E121100313140 /* ContentView.swift */; };
 		038725202A7E121200313140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0387251F2A7E121200313140 /* Assets.xcassets */; };
 		038725232A7E121200313140 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 038725222A7E121200313140 /* Preview Assets.xcassets */; };
 		03D828A12A8E3F01009AB1CA /* ThreeCardSpreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D828A02A8E3F01009AB1CA /* ThreeCardSpreadView.swift */; };
@@ -40,7 +39,6 @@
 		037145562A7E220700D33DEC /* CardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
 		038725182A7E121100313140 /* Tarot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tarot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0387251B2A7E121100313140 /* TarotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotApp.swift; sourceTree = "<group>"; };
-		0387251D2A7E121100313140 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0387251F2A7E121200313140 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		038725222A7E121200313140 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		03D828A02A8E3F01009AB1CA /* ThreeCardSpreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeCardSpreadView.swift; sourceTree = "<group>"; };
@@ -88,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				0387251B2A7E121100313140 /* TarotApp.swift */,
-				0387251D2A7E121100313140 /* ContentView.swift */,
 				03D828A42A9189EC009AB1CA /* SplashScreenView.swift */,
 				03101CBF2A814AE3009B3C56 /* MenuView.swift */,
 				03671A702A7F36DC00428A8B /* DailyCardView.swift */,
@@ -213,7 +210,6 @@
 				03DFCBC82A853B9600768C2E /* DailyCardButtonLabel.swift in Sources */,
 				03DFCBCA2A85426000768C2E /* DailyCardTitle.swift in Sources */,
 				03DFCBD42A87DAD000768C2E /* MenuLinkLabel.swift in Sources */,
-				0387251E2A7E121100313140 /* ContentView.swift in Sources */,
 				03DFCBC62A8460B600768C2E /* SwiftUIView.swift in Sources */,
 				03D828A72A966F75009AB1CA /* ThreeCardBackImage.swift in Sources */,
 				03101CC82A828BC7009B3C56 /* SearchCardView.swift in Sources */,
