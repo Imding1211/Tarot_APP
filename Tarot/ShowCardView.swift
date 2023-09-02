@@ -11,6 +11,8 @@ struct ShowCardView: View {
     
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.colorScheme) var colorScheme
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+    var isLandScape: Bool { verticalSizeClass == .compact }
     
     @State var cardState: Int
     @State var cardDatas: [CardInfo] = CardData().getData()
@@ -23,73 +25,140 @@ struct ShowCardView: View {
                 .resizable()
                 .ignoresSafeArea()
                     
-            VStack {
-                Text(cardDatas[cardState].englishName)
-                    .foregroundColor(Color("MainColor"))
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-                    .padding()
-                
-                HStack {
+            if isLandScape {
+                VStack {
+                    Text(cardDatas[cardState].englishName)
+                        .foregroundColor(Color("MainColor"))
+                        .font(.largeTitle)
+                        .fontWeight(.heavy)
+                        .padding()
                     
-                    VStack {
-                        
-                        Text(cardDatas[cardState].chineseName)
-                            .foregroundColor(Color("MainColor"))
-                            .font(.title)
-                            .fontWeight(.medium)
-                            .padding()
-                                            
-                        Divider()
-                            .foregroundColor(Color("MainColor"))
-                        
-                        if !isReversed {
-                            ShowCardKeyword(position: "正位關鍵字", message: cardDatas[cardState].keyWordUpright)
+                    HStack {
+                        Button {
+                            withAnimation(.default) {
+                                isReversed.toggle()
+                            }
+                        } label: {
+                            Image(cardDatas[cardState].imageName)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .cornerRadius(10)
+                                .rotationEffect(isReversed ? .degrees(180) : .degrees(0))
+                                .padding()
                         }
-                        else {
-                            ShowCardKeyword(position: "逆位關鍵字", message: cardDatas[cardState].keyWordReversed)
+                        
+                        VStack {
+                            Text(cardDatas[cardState].chineseName)
+                                .foregroundColor(Color("MainColor"))
+                                .font(.title3)
+                                .fontWeight(.medium)
+                                .padding()
+                            
+                            Divider()
+                                .foregroundColor(Color("MainColor"))
+                            
+                            if !isReversed {
+                                ShowCardKeyword(position: "正位關鍵字", message: cardDatas[cardState].keyWordUpright)
+                            }
+                            else {
+                                ShowCardKeyword(position: "逆位關鍵字", message: cardDatas[cardState].keyWordReversed)
+                            }
+                            
+                            Spacer()
+                            
+                            ScrollView {
+                                Text(cardDatas[cardState].describe)
+                                    .foregroundColor(Color("MainColor"))
+                                    .lineSpacing(15)
+                                    .padding()
+                            }
+                            
+                            Button {
+                                presentationMode.wrappedValue.dismiss()
+                            } label: {
+                                Image(systemName: "x.circle")
+                                    .font(.title3)
+                                    .fontWeight(.regular)
+                                    .foregroundColor(Color.black)
+                                    .background(Color.white.opacity(0.6))
+                                    .cornerRadius(20)
+                                    .shadow(color: .white, radius: 5)
+                            }
                         }
                     }
-                    .padding(.leading, 15)
+                }
+                .foregroundColor(Color.black)
+                .padding()
+            }
+            else{
+                VStack {
+                    Text(cardDatas[cardState].englishName)
+                        .foregroundColor(Color("MainColor"))
+                        .font(.largeTitle)
+                        .fontWeight(.heavy)
+                        .padding()
+                    
+                    HStack {
+                        
+                        VStack {
+                            
+                            Text(cardDatas[cardState].chineseName)
+                                .foregroundColor(Color("MainColor"))
+                                .font(.title)
+                                .fontWeight(.medium)
+                                .padding()
+                            
+                            Divider()
+                                .foregroundColor(Color("MainColor"))
+                            
+                            if !isReversed {
+                                ShowCardKeyword(position: "正位關鍵字", message: cardDatas[cardState].keyWordUpright)
+                            }
+                            else {
+                                ShowCardKeyword(position: "逆位關鍵字", message: cardDatas[cardState].keyWordReversed)
+                            }
+                        }
+                        .padding(.leading, 15)
+                        
+                        Button {
+                            withAnimation(.default) {
+                                isReversed.toggle()
+                            }
+                        } label: {
+                            Image(cardDatas[cardState].imageName)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .cornerRadius(10)
+                                .rotationEffect(isReversed ? .degrees(180) : .degrees(0))
+                                .padding(.trailing, 10)
+                        }
+                    }
+                    .padding(.trailing, 20)
+                    
+                    ScrollView {
+                        Text(cardDatas[cardState].describe)
+                            .foregroundColor(Color("MainColor"))
+                            .lineSpacing(15)
+                            .padding()
+                    }
+                    
+                    Spacer()
                     
                     Button {
-                        withAnimation(.default) {
-                            isReversed.toggle()
-                        }
+                        presentationMode.wrappedValue.dismiss()
                     } label: {
-                        Image(cardDatas[cardState].imageName)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .cornerRadius(10)
-                            .rotationEffect(isReversed ? .degrees(180) : .degrees(0))
-                            .padding(.trailing, 10)
+                        Image(systemName: "x.circle")
+                            .font(.largeTitle)
+                            .fontWeight(.regular)
+                            .foregroundColor(Color.black)
+                            .background(Color.white.opacity(0.6))
+                            .cornerRadius(20)
+                            .shadow(color: .white, radius: 5)
                     }
                 }
-                .padding(.trailing, 20)
-                
-                ScrollView {
-                    Text(cardDatas[cardState].describe)
-                        .foregroundColor(Color("MainColor"))
-                        .lineSpacing(15)
-                        .padding()
-                }
-                
-                Spacer()
-                
-                Button {
-                    presentationMode.wrappedValue.dismiss()
-                } label: {
-                    Image(systemName: "x.circle")
-                        .font(.largeTitle)
-                        .fontWeight(.regular)
-                        .foregroundColor(Color.black)
-                        .background(Color.white.opacity(0.6))
-                        .cornerRadius(20)
-                        .shadow(color: .white, radius: 5)
-                }
+                .foregroundColor(Color.black)
+                .padding()
             }
-            .foregroundColor(Color.black)
-            .padding()
         }
     }
 }

@@ -36,9 +36,6 @@ struct SplashScreenView: View {
                                     .aspectRatio(contentMode: .fill)
                             )
                         
-                        
-                        
-                        
                         Spacer()
                     }
                     .scaleEffect(size)

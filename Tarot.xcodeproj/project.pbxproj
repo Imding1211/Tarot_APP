@@ -112,9 +112,9 @@
 		03DFCBD12A87AA8D00768C2E /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				03DFCBC72A853B9600768C2E /* DailyCardButtonLabel.swift */,
-				03DFCBCB2A85445C00768C2E /* DailyCardImage.swift */,
 				03DFCBC92A85426000768C2E /* DailyCardTitle.swift */,
+				03DFCBCB2A85445C00768C2E /* DailyCardImage.swift */,
+				03DFCBC72A853B9600768C2E /* DailyCardButtonLabel.swift */,
 				03DFCBCF2A86939A00768C2E /* ShowCardKeyword.swift */,
 				03DFCBD32A87DACF00768C2E /* MenuLinkLabel.swift */,
 				03D828A82A9672E3009AB1CA /* ThreeCardDrawImage.swift */,

@@ -10,6 +10,8 @@ import SwiftUI
 struct MenuView: View {
     
     @Environment(\.colorScheme) var colorScheme
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+    var isLandScape: Bool { verticalSizeClass == .compact }
     
     var body: some View {
         
@@ -19,26 +21,54 @@ struct MenuView: View {
                     .resizable()
                     .ignoresSafeArea()
 
-                VStack(spacing: 30) {
-                    NavigationLink {
-                        DailyCardView()
-                    } label: {
-                        MenuLinkLabel(message: "Daily Tarot Draw")
-                    }
-                    
-                    NavigationLink {
-                        ThreeCardSpreadView()
-                    } label: {
-                        MenuLinkLabel(message: "3 Card Spread")
-                    }
-                    
-                    NavigationLink {
-                        SearchCardView()
-                    } label: {
-                        MenuLinkLabel(message: "Serch Card")
+                if isLandScape {
+                    HStack {
+                        Spacer()
+                        
+                        VStack {
+                            NavigationLink {
+                                DailyCardView()
+                            } label: {
+                                MenuLinkLabel(message: "Daily Tarot Draw")
+                            }
+                            
+                            NavigationLink {
+                                ThreeCardSpreadView()
+                            } label: {
+                                MenuLinkLabel(message: "3 Card Spread")
+                            }
+                            
+                            NavigationLink {
+                                SearchCardView()
+                            } label: {
+                                MenuLinkLabel(message: "Serch Card")
+                            }
+                        }
+                        .padding()
                     }
                 }
-                .padding()
+                else {
+                    VStack(spacing: 30) {
+                        NavigationLink {
+                            DailyCardView()
+                        } label: {
+                            MenuLinkLabel(message: "Daily Tarot Draw")
+                        }
+                        
+                        NavigationLink {
+                            ThreeCardSpreadView()
+                        } label: {
+                            MenuLinkLabel(message: "3 Card Spread")
+                        }
+                        
+                        NavigationLink {
+                            SearchCardView()
+                        } label: {
+                            MenuLinkLabel(message: "Serch Card")
+                        }
+                    }
+                    .padding()
+                }
             }
         }
         .accentColor(Color("MainColor"))
