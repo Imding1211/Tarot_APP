@@ -120,11 +120,13 @@ struct ThreeCardSpreadView: View {
                             Spacer()
                             
                             Button {
-                                isDrawedPast = false
-                                isDrawedPresent = false
-                                isDrawedFuture = false
-                                isAllDrawed = false
-                                CardIDArray.shuffle()
+                                withAnimation {
+                                    isDrawedPast = false
+                                    isDrawedPresent = false
+                                    isDrawedFuture = false
+                                    isAllDrawed = false
+                                    CardIDArray.shuffle()                               
+                                }
                             } label: {
                                 DailyCardButtonLabel(message: "洗牌", iconName: "repeat")
                             }
