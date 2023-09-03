@@ -10,8 +10,6 @@ import SwiftUI
 struct MenuView: View {
     
     @Environment(\.colorScheme) var colorScheme
-    @Environment(\.verticalSizeClass) var verticalSizeClass
-    var isLandScape: Bool { verticalSizeClass == .compact }
     
     var body: some View {
         
@@ -21,54 +19,26 @@ struct MenuView: View {
                     .resizable()
                     .ignoresSafeArea()
 
-                if isLandScape {
-                    HStack {
-                        Spacer()
-                        
-                        VStack {
-                            NavigationLink {
-                                DailyCardView()
-                            } label: {
-                                MenuLinkLabel(message: "Daily Tarot Draw")
-                            }
-                            
-                            NavigationLink {
-                                ThreeCardSpreadView()
-                            } label: {
-                                MenuLinkLabel(message: "3 Card Spread")
-                            }
-                            
-                            NavigationLink {
-                                SearchCardView()
-                            } label: {
-                                MenuLinkLabel(message: "Serch Card")
-                            }
-                        }
-                        .padding()
+                VStack(spacing: 30) {
+                    NavigationLink {
+                        DailyCardView()
+                    } label: {
+                        MenuLinkLabel(message: "Daily Tarot Draw")
+                    }
+                    
+                    NavigationLink {
+                        ThreeCardSpreadView()
+                    } label: {
+                        MenuLinkLabel(message: "3 Card Spread")
+                    }
+                    
+                    NavigationLink {
+                        SearchCardView()
+                    } label: {
+                        MenuLinkLabel(message: "Serch Card")
                     }
                 }
-                else {
-                    VStack(spacing: 30) {
-                        NavigationLink {
-                            DailyCardView()
-                        } label: {
-                            MenuLinkLabel(message: "Daily Tarot Draw")
-                        }
-                        
-                        NavigationLink {
-                            ThreeCardSpreadView()
-                        } label: {
-                            MenuLinkLabel(message: "3 Card Spread")
-                        }
-                        
-                        NavigationLink {
-                            SearchCardView()
-                        } label: {
-                            MenuLinkLabel(message: "Serch Card")
-                        }
-                    }
-                    .padding()
-                }
+                .padding()
             }
         }
         .accentColor(Color("MainColor"))

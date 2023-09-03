@@ -10,9 +10,7 @@ import SwiftUI
 struct DailyCardView: View {
     
     @Environment(\.colorScheme) var colorScheme
-    @Environment(\.verticalSizeClass) var verticalSizeClass
-    var isLandScape: Bool { verticalSizeClass == .compact }
-    
+
     @State var cardState: Int = 0
     @State var cardIndex: Int = Int.random(in: 1...156)
     @State var turnCardDegrees: Double = 0.0
@@ -28,140 +26,70 @@ struct DailyCardView: View {
                     .resizable()
                     .ignoresSafeArea()
                 
-                if isLandScape {
-                    HStack (spacing: 40) {
+                VStack {
+                    
+                    DailyCardTitle(message: cardState > 78 ? cardDatas[cardState-78].englishName : cardDatas[cardState].englishName)
+                    
+                    Button {
+                        if cardState == 0 {
+                            turnCard()
+                            
+                            DispatchQueue.main.asyncAfter(deadline:  .now() + 0.5) {
+                                showCardSheet.toggle()
+                            }
+                        }
+                        else {
+                            showCardSheet.toggle()
+                        }
+
+                    } label: {
+                        if cardState == 0 {
+                            DailyCardImage(imageName: cardDatas[cardState].imageName)
+                                .rotation3DEffect(.degrees(turnCardDegrees), axis: (x: 0, y: 1, z: 0))
+                                .rotationEffect(.degrees(shuffleCardDegrees))
+                        }
+                        else if cardState <= 78 {
+                            DailyCardImage(imageName: cardDatas[cardState].imageName)
+                                .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
+                                .rotation3DEffect(.degrees(turnCardDegrees), axis: (x: 0, y: 1, z: 0))
+                        }
+                        else {
+                            DailyCardImage(imageName: cardDatas[cardState-78].imageName)
+                                .rotationEffect(.degrees(180))
+                                .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
+                                .rotation3DEffect(.degrees(turnCardDegrees), axis: (x: 0, y: 1, z: 0))
+                        }
+                    }
+                    
+                    HStack {
+                        Spacer()
                         
                         Button {
-                            if cardState == 0 {
+                            turnCard()
+                        } label: {
+                            DailyCardButtonLabel(message: "翻牌", iconName: "arrow.triangle.2.circlepath")
+                        }
+                        
+                        Spacer()
+                        
+                        Button {
+                            shuffleCard()
+                            
+                            if cardState != 0 {
                                 turnCard()
-                                
-                                DispatchQueue.main.asyncAfter(deadline:  .now() + 0.5) {
-                                    showCardSheet.toggle()
-                                }
                             }
-                            else {
-                                showCardSheet.toggle()
+                            withAnimation(.default) {
+                                shuffleCardDegrees += 360
                             }
                             
                         } label: {
-                            if cardState == 0 {
-                                DailyCardImage(imageName: cardDatas[cardState].imageName)
-                                    .rotation3DEffect(.degrees(turnCardDegrees), axis: (x: 0, y: 1, z: 0))
-                                    .rotationEffect(.degrees(shuffleCardDegrees))
-                            }
-                            else if cardState <= 78 {
-                                DailyCardImage(imageName: cardDatas[cardState].imageName)
-                                    .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
-                                    .rotation3DEffect(.degrees(turnCardDegrees), axis: (x: 0, y: 1, z: 0))
-                            }
-                            else {
-                                DailyCardImage(imageName: cardDatas[cardState-78].imageName)
-                                    .rotationEffect(.degrees(180))
-                                    .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
-                                    .rotation3DEffect(.degrees(turnCardDegrees), axis: (x: 0, y: 1, z: 0))
-                            }
+                            DailyCardButtonLabel(message: "洗牌", iconName: "repeat")
                         }
                         
-                        VStack {
-                            Spacer()
-                            
-                            DailyCardTitle(message: cardState > 78 ? cardDatas[cardState-78].englishName : cardDatas[cardState].englishName)
-                            
-                            Spacer()
-                            
-                            Button {
-                                turnCard()
-                            } label: {
-                                DailyCardButtonLabel(message: "翻牌", iconName: "arrow.triangle.2.circlepath")
-                            }
-                            
-                            Spacer()
-                            
-                            Button {
-                                shuffleCard()
-                                
-                                if cardState != 0 {
-                                    turnCard()
-                                }
-                                withAnimation(.default) {
-                                    shuffleCardDegrees += 360
-                                }
-                                
-                            } label: {
-                                DailyCardButtonLabel(message: "洗牌", iconName: "repeat")
-                            }
-                            
-                            Spacer()
-                        }
-                        .scaleEffect(0.8)
+                        Spacer()
                     }
                     .padding()
-                }
-                else {
-                    VStack {
-                        DailyCardTitle(message: cardState > 78 ? cardDatas[cardState-78].englishName : cardDatas[cardState].englishName)
-                        
-                        Button {
-                            if cardState == 0 {
-                                turnCard()
-                                
-                                DispatchQueue.main.asyncAfter(deadline:  .now() + 0.5) {
-                                    showCardSheet.toggle()
-                                }
-                            }
-                            else {
-                                showCardSheet.toggle()
-                            }
-                            
-                        } label: {
-                            if cardState == 0 {
-                                DailyCardImage(imageName: cardDatas[cardState].imageName)
-                                    .rotation3DEffect(.degrees(turnCardDegrees), axis: (x: 0, y: 1, z: 0))
-                                    .rotationEffect(.degrees(shuffleCardDegrees))
-                            }
-                            else if cardState <= 78 {
-                                DailyCardImage(imageName: cardDatas[cardState].imageName)
-                                    .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
-                                    .rotation3DEffect(.degrees(turnCardDegrees), axis: (x: 0, y: 1, z: 0))
-                            }
-                            else {
-                                DailyCardImage(imageName: cardDatas[cardState-78].imageName)
-                                    .rotationEffect(.degrees(180))
-                                    .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
-                                    .rotation3DEffect(.degrees(turnCardDegrees), axis: (x: 0, y: 1, z: 0))
-                            }
-                        }
-                        
-                        HStack {
-                            Spacer()
-                            
-                            Button {
-                                turnCard()
-                            } label: {
-                                DailyCardButtonLabel(message: "翻牌", iconName: "arrow.triangle.2.circlepath")
-                            }
-                            
-                            Spacer()
-                            
-                            Button {
-                                shuffleCard()
-                                
-                                if cardState != 0 {
-                                    turnCard()
-                                }
-                                withAnimation(.default) {
-                                    shuffleCardDegrees += 360
-                                }
-                                
-                            } label: {
-                                DailyCardButtonLabel(message: "洗牌", iconName: "repeat")
-                            }
-                            
-                            Spacer()
-                        }
-                        .padding()
-                        
-                    }
+                    
                 }
             }
             .navigationTitle("Daily Tarot Draw")
