@@ -11,12 +11,17 @@ struct ThreeCardSpreadView: View {
     
     @Environment(\.colorScheme) var colorScheme
     
-    @State var CardIDArray: [Int] = [Int](1...156).shuffled()
+    @State var drawCardsName: [String] = CardData().getData().map({ $0.imageName }).shuffled()
+    @State var drawCardsNum: [Int] = [Int](1...78).shuffled()
     @State var cardDatas: [CardInfo] = CardData().getData()
-    @State var isDrawedPast: Bool = false
-    @State var isDrawedPresent: Bool = false
-    @State var isDrawedFuture: Bool = false
-    @State var isAllDrawed: Bool = false
+    
+    @State var pastCardName: String = ""
+    @State var presentCardName: String = ""
+    @State var futureCardName: String = ""
+    
+    @State var pastPosition: Bool = false
+    @State var presentPosition: Bool = false
+    @State var futurePosition: Bool = false
     
     var body: some View {
         
@@ -27,154 +32,58 @@ struct ThreeCardSpreadView: View {
                     .ignoresSafeArea()
                 
                 VStack {
-                    
-                    Spacer()
-                    
-                    if !isAllDrawed {
-                        HStack {
-                            if isDrawedPast {
-                                VStack (spacing: 20) {
-                                    if CardIDArray[0] <= 78 {
-                                        ThreeCardDrawImage(imageName: cardDatas[CardIDArray[0]].imageName)
-                                    }
-                                    else if CardIDArray[0] > 78 {
-                                        ThreeCardDrawImage(imageName: cardDatas[CardIDArray[0]-78].imageName)
-                                            .rotationEffect(.degrees(180))
-                                    }
-                                    
-                                    ThreeCardSpreadText(message: "Past")
-                                }
-                                
-                            }
-                            
-                            if isDrawedPresent {
-                                VStack (spacing: 20) {
-                                    if CardIDArray[1] <= 78 {
-                                        ThreeCardDrawImage(imageName: cardDatas[CardIDArray[1]].imageName)
-                                    }
-                                    else if CardIDArray[1] > 78 {
-                                        ThreeCardDrawImage(imageName: cardDatas[CardIDArray[1]-78].imageName)
-                                            .rotationEffect(.degrees(180))
-                                    }
-                                    
-                                    ThreeCardSpreadText(message: "Present")
-                                }
-                            }
-                            
-                            if isDrawedFuture {
-                                VStack (spacing: 20) {
-                                    if CardIDArray[2] <= 78 {
-                                        ThreeCardDrawImage(imageName: cardDatas[CardIDArray[2]].imageName)
-                                    }
-                                    else if CardIDArray[2] > 78 {
-                                        ThreeCardDrawImage(imageName: cardDatas[CardIDArray[2]-78].imageName)
-                                            .rotationEffect(.degrees(180))
-                                    }
-                                    
-                                    ThreeCardSpreadText(message: "Future")
-                                }
-                            }
-                        }
-                        .padding()
-                    }
-                    else {
-                        VStack {
-                            Spacer()
-                            
-                            HStack {
-                                ThreeCardSpreadText(message: "Past")
-                                
-                                if CardIDArray[0] <= 78 {
-                                    ThreeCardSpreadImage(imageName: cardDatas[CardIDArray[0]].imageName)
-                                }
-                                else if CardIDArray[0] > 78 {
-                                    ThreeCardSpreadImage(imageName: cardDatas[CardIDArray[0]-78].imageName)
-                                        .rotationEffect(.degrees(180))
-                                }
-                            }
-                            
-                            HStack {
-                                ThreeCardSpreadText(message: "Present")
-                                
-                                if CardIDArray[1] <= 78 {
-                                    ThreeCardSpreadImage(imageName: cardDatas[CardIDArray[1]].imageName)
-                                }
-                                else if CardIDArray[1] > 78 {
-                                    ThreeCardSpreadImage(imageName: cardDatas[CardIDArray[1]-78].imageName)
-                                        .rotationEffect(.degrees(180))
-                                }
-                            }
-                            
-                            HStack {
-                                ThreeCardSpreadText(message: "Future")
-                                
-                                if CardIDArray[2] <= 78 {
-                                    ThreeCardSpreadImage(imageName: cardDatas[CardIDArray[2]].imageName)
-                                }
-                                else if CardIDArray[2] > 78 {
-                                    ThreeCardSpreadImage(imageName: cardDatas[CardIDArray[2]-78].imageName)
-                                        .rotationEffect(.degrees(180))
-                                }
-                            }
-                            
-                            Spacer()
-                            
-                            Button {
+                    HStack {
+                        ThreeCardShowView(imageName: pastCardName, message: "Past", position: pastPosition)
+                            .dropDestination(for: String.self) { items, location in
                                 withAnimation {
-                                    isDrawedPast = false
-                                    isDrawedPresent = false
-                                    isDrawedFuture = false
-                                    isAllDrawed = false
-                                    CardIDArray.shuffle()                               
+                                    for item in items {
+                                        drawCardsName.removeAll { $0 == item }
+                                    }
                                 }
-                            } label: {
-                                DailyCardButtonLabel(message: "洗牌", iconName: "repeat")
+                                pastCardName = cardDatas[drawCardsNum[0]].imageName
+                                pastPosition = Bool.random()
+                                return true
                             }
-
-                        }
+                        
+                        ThreeCardShowView(imageName: presentCardName, message: "Present", position: presentPosition)
+                            .dropDestination(for: String.self) { items, location in
+                                withAnimation {
+                                    for item in items {
+                                        drawCardsName.removeAll { $0 == item }
+                                    }
+                                }
+                                presentCardName = cardDatas[drawCardsNum[1]].imageName
+                                presentPosition = Bool.random()
+                                return true
+                            }
+                        
+                        ThreeCardShowView(imageName: futureCardName, message: "Future", position: futurePosition)
+                            .dropDestination(for: String.self) { items, location in
+                                withAnimation {
+                                    for item in items {
+                                        drawCardsName.removeAll { $0 == item }
+                                    }
+                                }
+                                futureCardName = cardDatas[drawCardsNum[2]].imageName
+                                futurePosition = Bool.random()
+                                return true
+                            }
                     }
                     
+                    ThreeCardDrawView(tasks: drawCardsName)
                     
-                    Spacer()
-                    
-                    ZStack {
-                        if !isAllDrawed {
-                            ThreeCardBackImage(imageName: "CardBacks", offSet: 0, isShow: isAllDrawed)
+                    Button {
+                        withAnimation {
+                            pastCardName = ""
+                            presentCardName = ""
+                            futureCardName = ""
+                            drawCardsNum = [Int](1...78).shuffled()
+                            drawCardsName = CardData().getData().map({ $0.imageName }).shuffled()
                         }
-                        
-                        if !isDrawedFuture {
-                            ThreeCardBackImage(imageName: "CardBacks", offSet: -10, isShow: isDrawedPresent)
-                                .onTapGesture {
-                                    withAnimation {
-                                        isDrawedFuture = true
-                                        DispatchQueue.main.asyncAfter(deadline:  .now() + 0.5) {
-                                            withAnimation {
-                                                isAllDrawed = true
-                                            }
-                                        }
-                                    }
-                                }
-                        }
-                        
-                        if !isDrawedPresent {
-                            ThreeCardBackImage(imageName: "CardBacks", offSet: -20, isShow: isDrawedPast)
-                                .onTapGesture {
-                                    withAnimation {
-                                        isDrawedPresent = true
-                                    }
-                                }
-                        }
-                        
-                        if !isDrawedPast {
-                            ThreeCardBackImage(imageName: "CardBacks", offSet: -30, isShow: true)
-                                .onTapGesture {
-                                    withAnimation {
-                                        isDrawedPast = true
-                                    }
-                                }
-                        }
+                    } label: {
+                        DailyCardButtonLabel(message: "洗牌", iconName: "repeat")
                     }
-                    .padding()
+                    
                 }
             }
             .navigationTitle("3 Card Spread")

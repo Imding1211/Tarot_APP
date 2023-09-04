@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		03101CC02A814AE3009B3C56 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101CBF2A814AE3009B3C56 /* MenuView.swift */; };
 		03101CC82A828BC7009B3C56 /* SearchCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101CC72A828BC7009B3C56 /* SearchCardView.swift */; };
+		0347A4882AA61856004BB12C /* ThreeCardDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0347A4872AA61856004BB12C /* ThreeCardDrawView.swift */; };
+		0347A48A2AA6195A004BB12C /* ThreeCardShowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0347A4892AA6195A004BB12C /* ThreeCardShowView.swift */; };
 		03671A712A7F36DC00428A8B /* DailyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03671A702A7F36DC00428A8B /* DailyCardView.swift */; };
 		03671A772A7F835700428A8B /* ShowCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03671A762A7F835700428A8B /* ShowCardView.swift */; };
 		037145532A7E19A300D33DEC /* CardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037145522A7E19A300D33DEC /* CardInfo.swift */; };
@@ -17,11 +19,7 @@
 		038725202A7E121200313140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0387251F2A7E121200313140 /* Assets.xcassets */; };
 		038725232A7E121200313140 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 038725222A7E121200313140 /* Preview Assets.xcassets */; };
 		03D828A12A8E3F01009AB1CA /* ThreeCardSpreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D828A02A8E3F01009AB1CA /* ThreeCardSpreadView.swift */; };
-		03D828A32A8E81C2009AB1CA /* ThreeCardSpreadText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D828A22A8E81C2009AB1CA /* ThreeCardSpreadText.swift */; };
 		03D828A52A9189EC009AB1CA /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D828A42A9189EC009AB1CA /* SplashScreenView.swift */; };
-		03D828A72A966F75009AB1CA /* ThreeCardBackImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D828A62A966F75009AB1CA /* ThreeCardBackImage.swift */; };
-		03D828A92A9672E3009AB1CA /* ThreeCardDrawImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D828A82A9672E3009AB1CA /* ThreeCardDrawImage.swift */; };
-		03D828AB2A97ADCA009AB1CA /* ThreeCardSpreadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D828AA2A97ADCA009AB1CA /* ThreeCardSpreadImage.swift */; };
 		03DFCBC62A8460B600768C2E /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DFCBC52A8460B600768C2E /* SwiftUIView.swift */; };
 		03DFCBC82A853B9600768C2E /* DailyCardButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DFCBC72A853B9600768C2E /* DailyCardButtonLabel.swift */; };
 		03DFCBCA2A85426000768C2E /* DailyCardTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DFCBC92A85426000768C2E /* DailyCardTitle.swift */; };
@@ -33,6 +31,8 @@
 /* Begin PBXFileReference section */
 		03101CBF2A814AE3009B3C56 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		03101CC72A828BC7009B3C56 /* SearchCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCardView.swift; sourceTree = "<group>"; };
+		0347A4872AA61856004BB12C /* ThreeCardDrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeCardDrawView.swift; sourceTree = "<group>"; };
+		0347A4892AA6195A004BB12C /* ThreeCardShowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeCardShowView.swift; sourceTree = "<group>"; };
 		03671A702A7F36DC00428A8B /* DailyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCardView.swift; sourceTree = "<group>"; };
 		03671A762A7F835700428A8B /* ShowCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCardView.swift; sourceTree = "<group>"; };
 		037145522A7E19A300D33DEC /* CardInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfo.swift; sourceTree = "<group>"; };
@@ -42,11 +42,7 @@
 		0387251F2A7E121200313140 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		038725222A7E121200313140 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		03D828A02A8E3F01009AB1CA /* ThreeCardSpreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeCardSpreadView.swift; sourceTree = "<group>"; };
-		03D828A22A8E81C2009AB1CA /* ThreeCardSpreadText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeCardSpreadText.swift; sourceTree = "<group>"; };
 		03D828A42A9189EC009AB1CA /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
-		03D828A62A966F75009AB1CA /* ThreeCardBackImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeCardBackImage.swift; sourceTree = "<group>"; };
-		03D828A82A9672E3009AB1CA /* ThreeCardDrawImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeCardDrawImage.swift; sourceTree = "<group>"; };
-		03D828AA2A97ADCA009AB1CA /* ThreeCardSpreadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeCardSpreadImage.swift; sourceTree = "<group>"; };
 		03DFCBC52A8460B600768C2E /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		03DFCBC72A853B9600768C2E /* DailyCardButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCardButtonLabel.swift; sourceTree = "<group>"; };
 		03DFCBC92A85426000768C2E /* DailyCardTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCardTitle.swift; sourceTree = "<group>"; };
@@ -117,10 +113,8 @@
 				03DFCBC72A853B9600768C2E /* DailyCardButtonLabel.swift */,
 				03DFCBCF2A86939A00768C2E /* ShowCardKeyword.swift */,
 				03DFCBD32A87DACF00768C2E /* MenuLinkLabel.swift */,
-				03D828A82A9672E3009AB1CA /* ThreeCardDrawImage.swift */,
-				03D828A22A8E81C2009AB1CA /* ThreeCardSpreadText.swift */,
-				03D828AA2A97ADCA009AB1CA /* ThreeCardSpreadImage.swift */,
-				03D828A62A966F75009AB1CA /* ThreeCardBackImage.swift */,
+				0347A4872AA61856004BB12C /* ThreeCardDrawView.swift */,
+				0347A4892AA6195A004BB12C /* ThreeCardShowView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -206,23 +200,21 @@
 			files = (
 				03D828A12A8E3F01009AB1CA /* ThreeCardSpreadView.swift in Sources */,
 				03101CC02A814AE3009B3C56 /* MenuView.swift in Sources */,
-				03D828A92A9672E3009AB1CA /* ThreeCardDrawImage.swift in Sources */,
 				03DFCBC82A853B9600768C2E /* DailyCardButtonLabel.swift in Sources */,
 				03DFCBCA2A85426000768C2E /* DailyCardTitle.swift in Sources */,
 				03DFCBD42A87DAD000768C2E /* MenuLinkLabel.swift in Sources */,
 				03DFCBC62A8460B600768C2E /* SwiftUIView.swift in Sources */,
-				03D828A72A966F75009AB1CA /* ThreeCardBackImage.swift in Sources */,
 				03101CC82A828BC7009B3C56 /* SearchCardView.swift in Sources */,
+				0347A4882AA61856004BB12C /* ThreeCardDrawView.swift in Sources */,
 				037145572A7E220700D33DEC /* CardData.swift in Sources */,
 				03DFCBCC2A85445C00768C2E /* DailyCardImage.swift in Sources */,
 				03D828A52A9189EC009AB1CA /* SplashScreenView.swift in Sources */,
 				03671A772A7F835700428A8B /* ShowCardView.swift in Sources */,
 				037145532A7E19A300D33DEC /* CardInfo.swift in Sources */,
 				03671A712A7F36DC00428A8B /* DailyCardView.swift in Sources */,
-				03D828A32A8E81C2009AB1CA /* ThreeCardSpreadText.swift in Sources */,
-				03D828AB2A97ADCA009AB1CA /* ThreeCardSpreadImage.swift in Sources */,
 				03DFCBD02A86939A00768C2E /* ShowCardKeyword.swift in Sources */,
 				0387251C2A7E121100313140 /* TarotApp.swift in Sources */,
+				0347A48A2AA6195A004BB12C /* ThreeCardShowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
