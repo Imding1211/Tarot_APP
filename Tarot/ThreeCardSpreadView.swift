@@ -33,7 +33,7 @@ struct ThreeCardSpreadView: View {
                 
                 VStack {
                     HStack {
-                        ThreeCardShowView(imageName: pastCardName, message: "Past", position: pastPosition)
+                        ThreeCardShowView(cardID: drawCardsNum[0], imageName: pastCardName, message: "Past", isReversed: pastPosition)
                             .dropDestination(for: String.self) { items, location in
                                 withAnimation {
                                     for item in items {
@@ -45,7 +45,7 @@ struct ThreeCardSpreadView: View {
                                 return true
                             }
                         
-                        ThreeCardShowView(imageName: presentCardName, message: "Present", position: presentPosition)
+                        ThreeCardShowView(cardID: drawCardsNum[1], imageName: presentCardName, message: "Present", isReversed: presentPosition)
                             .dropDestination(for: String.self) { items, location in
                                 withAnimation {
                                     for item in items {
@@ -57,7 +57,7 @@ struct ThreeCardSpreadView: View {
                                 return true
                             }
                         
-                        ThreeCardShowView(imageName: futureCardName, message: "Future", position: futurePosition)
+                        ThreeCardShowView(cardID: drawCardsNum[2], imageName: futureCardName, message: "Future",  isReversed: futurePosition)
                             .dropDestination(for: String.self) { items, location in
                                 withAnimation {
                                     for item in items {

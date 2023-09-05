@@ -12,8 +12,9 @@ struct ShowCardView: View {
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.colorScheme) var colorScheme
     
-    @State var cardState: Int
     @State var cardDatas: [CardInfo] = CardData().getData()
+    
+    @State var cardState: Int
     @State var isReversed: Bool
     
     var body: some View {

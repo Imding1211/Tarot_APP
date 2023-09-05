@@ -9,9 +9,12 @@ import SwiftUI
 
 struct ThreeCardShowView: View {
     
+    let cardID: Int
     let imageName: String
     let message: String
-    let position: Bool
+    let isReversed: Bool
+    
+    @State var showCardSheet: Bool = false
     
     var body: some View {
         
@@ -29,8 +32,11 @@ struct ThreeCardShowView: View {
                     .cornerRadius(5)
                     .shadow(color: .white, radius: 5)
                     .frame(width: 90, height: 150)
-                    .rotationEffect(position ? .degrees(0) : .degrees(180))
+                    .rotationEffect(isReversed ? .degrees(180) : .degrees(0))
                     .draggable(imageName)
+                    .onTapGesture {
+                        showCardSheet.toggle()
+                    }
                 
                 Text(message)
                     .font(.title3)
@@ -42,11 +48,14 @@ struct ThreeCardShowView: View {
                     .shadow(color: .white, radius: 5)
             }
         }
+        .sheet(isPresented: $showCardSheet) {
+            ShowCardView(cardState: cardID, isReversed: isReversed)
+        }
     }
 }
 
 struct ThreeCardShowView_Previews: PreviewProvider {
     static var previews: some View {
-        ThreeCardShowView(imageName: "11-Justice", message: "Past", position: true)
+        ThreeCardShowView(cardID: 12, imageName: "11-Justice", message: "Past", isReversed: true)
     }
 }
