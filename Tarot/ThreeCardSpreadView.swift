@@ -22,6 +22,7 @@ struct ThreeCardSpreadView: View {
     @State var pastPosition: Bool = false
     @State var presentPosition: Bool = false
     @State var futurePosition: Bool = false
+    @State var isTimeOn: Bool = true
     
     var body: some View {
         
@@ -33,7 +34,7 @@ struct ThreeCardSpreadView: View {
                 
                 VStack {
                     HStack {
-                        ThreeCardShowView(cardID: drawCardsNum[0], imageName: pastCardName, message: "Past", isReversed: pastPosition)
+                        ThreeCardShowView(cardID: drawCardsNum[0], imageName: pastCardName, message: "Past", isReversed: pastPosition, isTimeOn: isTimeOn)
                             .dropDestination(for: String.self) { items, location in
                                 withAnimation {
                                     for item in items {
@@ -45,7 +46,7 @@ struct ThreeCardSpreadView: View {
                                 return true
                             }
                         
-                        ThreeCardShowView(cardID: drawCardsNum[1], imageName: presentCardName, message: "Present", isReversed: presentPosition)
+                        ThreeCardShowView(cardID: drawCardsNum[1], imageName: presentCardName, message: "Present", isReversed: presentPosition, isTimeOn: isTimeOn)
                             .dropDestination(for: String.self) { items, location in
                                 withAnimation {
                                     for item in items {
@@ -57,7 +58,7 @@ struct ThreeCardSpreadView: View {
                                 return true
                             }
                         
-                        ThreeCardShowView(cardID: drawCardsNum[2], imageName: futureCardName, message: "Future",  isReversed: futurePosition)
+                        ThreeCardShowView(cardID: drawCardsNum[2], imageName: futureCardName, message: "Future",  isReversed: futurePosition, isTimeOn: isTimeOn)
                             .dropDestination(for: String.self) { items, location in
                                 withAnimation {
                                     for item in items {
@@ -72,24 +73,36 @@ struct ThreeCardSpreadView: View {
                     
                     ThreeCardDrawView(tasks: drawCardsName)
                     
-                    Button {
-                        withAnimation {
-                            pastCardName = ""
-                            presentCardName = ""
-                            futureCardName = ""
-                            drawCardsNum = [Int](1...78).shuffled()
-                            drawCardsName = CardData().getData().map({ $0.imageName }).shuffled()
+                    HStack {
+                        Button {
+                            withAnimation {
+                                pastCardName = ""
+                                presentCardName = ""
+                                futureCardName = ""
+                                drawCardsNum = [Int](1...78).shuffled()
+                                drawCardsName = CardData().getData().map({ $0.imageName }).shuffled()
+                            }
+                        } label: {
+                            DailyCardButtonLabel(message: "洗牌", iconName: "repeat")
                         }
-                    } label: {
-                        DailyCardButtonLabel(message: "洗牌", iconName: "repeat")
+                        
+                        Button {
+                            withAnimation {
+                                isTimeOn.toggle()
+                            }
+                        } label: {
+                            DailyCardButtonLabel(message: "開關", iconName: "repeat")
+                        }
+                        
                     }
+                    
                     
                 }
             }
             .navigationTitle("3 Card Spread")
         }
         .accentColor(Color("MainColor"))
-    }
+    } 
 }
 
 struct ThreeCardSpreadView_Previews: PreviewProvider {

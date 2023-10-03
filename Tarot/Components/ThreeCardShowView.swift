@@ -13,6 +13,7 @@ struct ThreeCardShowView: View {
     let imageName: String
     let message: String
     let isReversed: Bool
+    let isTimeOn: Bool
     
     @State var showCardSheet: Bool = false
     
@@ -38,9 +39,9 @@ struct ThreeCardShowView: View {
                         showCardSheet.toggle()
                     }
                 
-                Text(message)
+                Text(isTimeOn ? message : "")
                     .font(.title3)
-                    .frame(maxWidth: 120)
+                    .frame(maxWidth: 120, maxHeight: 10)
                     .fontWeight(.heavy)
                     .foregroundColor(Color.black)
                     .padding()
@@ -56,6 +57,6 @@ struct ThreeCardShowView: View {
 
 struct ThreeCardShowView_Previews: PreviewProvider {
     static var previews: some View {
-        ThreeCardShowView(cardID: 12, imageName: "11-Justice", message: "Past", isReversed: true)
+        ThreeCardShowView(cardID: 12, imageName: "11-Justice", message: "Past", isReversed: true, isTimeOn: true)
     }
 }
