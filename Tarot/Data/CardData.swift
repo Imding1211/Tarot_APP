@@ -28,7 +28,7 @@ struct CardData {
                      imageName: "00-TheFool",
                      keyWordUpright: "開端，純真，自發性，自由的精神",
                      keyWordReversed: "躊躇不前，魯莽，冒險",
-                     describe: "一位穿著華麗的旅人，手持簡易的行囊以及白色玫瑰，一副充滿好奇心的樣子，哪怕前方是斷崖，依然大步地向前走，勇氣十足且義無反顧。"),
+                     describe: "最後一張牌，愚者象徵新開始、冒險和無限的信仰的旅程。一名年輕的旅者站在懸崖邊緣，手持小包，表現出對未知的冒險精神，並敢於嘗試。"),
             
             CardInfo(cardID: 2,
                      cardType: "Major",
@@ -37,7 +37,7 @@ struct CardData {
                      imageName: "01-TheMagician",
                      keyWordUpright: "表現，機智，力量，啟發行動",
                      keyWordReversed: "操作，計劃不周，人才未開發",
-                     describe: "魔術師頭頂上的無限符號、腰上的銜尾蛇皮帶、以及一手指天一首指地的雙手，都暗示著無限的循環，訴說著即使他站在世界的起點，他不驕傲、也不炫耀，因為他知道追尋智慧的道路是無始無終的，是無限循環的，每一件事都沒有絕對的標準答案，必須不斷的尋找，不斷的探索，找到屬於自己的道路。"),
+                     describe: "魔術師代表創造、主動性和自主權。他站在祭壇前，手持一根魔杖，象徵著能量的引導，還有四個元素的象徵：劍、權杖、聖杯和錢幣，顯示了全面性的潛力和能力。"),
                 
             CardInfo(cardID: 3,
                      cardType: "Major",
@@ -46,7 +46,7 @@ struct CardData {
                      imageName: "02-TheHighPriestess",
                      keyWordUpright: "直覺，神聖的知識，神聖的女性，潛意識",
                      keyWordReversed: "缺乏中心，內心的聲音消失，壓抑的感覺",
-                     describe: "女祭司就像一個擁有神秘面紗的冰山美人，眼神明亮清楚且透徹，姿態平靜又內斂，好像能夠用那透徹的雙眼穿過世俗表象的面紗，看透那神聖純白無暇的內心。​"),
+                     describe: "女祭司象徵神秘、直覺和深層內在智慧。她坐在一個黑白柱子之間，代表著對立的力量，她的頭上有月亮的象徵，突顯了她的靈性聯繫和直覺洞察。"),
                 
             CardInfo(cardID: 4,
                      cardType: "Major",
@@ -55,7 +55,7 @@ struct CardData {
                      imageName: "03-TheEmpress",
                      keyWordUpright: "女性氣質，美麗，自然，養育，豐富",
                      keyWordReversed: "創造性障礙，財務問題，停滯，內在問題，對他人的依賴和不育",
-                     describe: "一身富麗堂皇的皇后，坐在一片綠意盎然的森林中，讓整個畫面都看起來非常美好，非常和諧。皇后跟神話的愛神維納斯有關。"),
+                     describe: "皇后代表愛、慈悲和母性的力量。她坐在寶座上，手持權杖和聖杯，表現了她的權威和關愛。她的存在提醒我們關懷和支持他人的價值。"),
                 
             CardInfo(cardID: 5,
                      cardType: "Major",
@@ -64,7 +64,7 @@ struct CardData {
                      imageName: "04-TheEmperor",
                      keyWordUpright: "權威，結構，控制力，父權",
                      keyWordReversed: "統治，過度控制，缺乏紀律，缺乏靈活性",
-                     describe: "皇帝成功的統治一切，擁有這些的皇帝應該是要感到非常的滿足並且開心，不過皇帝的眼睛卻閃爍著不安，明明就站在最高點.眼神怎麼會露出擔憂跟害怕呢？"),
+                     describe: "皇帝象徵權威、領導和穩定。他坐在寶座上，手持錢幣和錘子，顯示了他的掌控能力和建設性的力量。他鼓勵我們在生活中保持穩定和組織。"),
                 
             CardInfo(cardID: 6,
                      cardType: "Major",
@@ -73,7 +73,7 @@ struct CardData {
                      imageName: "05-TheHierophant",
                      keyWordUpright: "精神智慧，宗教信仰，整合，傳統，規範",
                      keyWordReversed: "個人信念，自由，挑戰現狀 ，叛逆，顛覆，新方法",
-                     describe: "經過了上一張皇帝牌的故事來到了教皇牌，上一張的皇帝牌主要在描述的都是跟這現實跟這個物質世界相關的事情。來到了教皇牌，即將開始追求神性了。"),
+                     describe: "教皇代表精神信仰、道德和神聖指導。他坐在寶座上，手持法杖，象徵著精神的權威。他提醒我們尋求精神智慧和靈性導師的指導。"),
                 
             CardInfo(cardID: 7,
                      cardType: "Major",
@@ -82,7 +82,7 @@ struct CardData {
                      imageName: "06-TheLovers",
                      keyWordUpright: "愛情，和諧，夥伴關係，價值觀一致，選擇",
                      keyWordReversed: "自愛，不和諧，失衡，價值觀錯位",
-                     describe: "圖中的畫面很清楚的繪畫出大家所熟知的伊甸園，以及亞當與夏娃。女人身旁的蘋果樹與蛇，而男人身旁的則是猶太教的生命之樹。伊甸園的故事中夏娃受到蛇的誘惑，讓亞當咬下了知識的果實而使得兩個人被逐出伊甸園。這些是大家耳熟能詳的故事。"),
+                     describe: "戀人代表愛情、選擇和內在和諧的追求。畫面中有一對男女，代表著愛情的選擇，而上方的天使象徵著祝福和指導。這張牌提醒我們，愛情和關係是生活中的重要部分。"),
                 
             CardInfo(cardID: 8,
                      cardType: "Major",
@@ -91,7 +91,7 @@ struct CardData {
                      imageName: "07-TheChariot",
                      keyWordUpright: "控制，意志力，成功，行動，決心",
                      keyWordReversed: "缺乏控制 ，反對，缺乏方向 ，侵略",
-                     describe: "牌中王子乘坐著戰車，手持權杖代表著行動力的象徵。我們可以看到戰車正橫跨著水路兩地，水代表著情緒與意識的精神世界，陸地則代表著物質與實像的世界。"),
+                     describe: "戰車代表勝利、毅力和克服困難的力量。一名戰士站在車上，兩匹對立的馬拉動，象徵了對立的力量，但戰士通過毅力和控制實現勝利。"),
                 
             CardInfo(cardID: 9,
                      cardType: "Major",
@@ -100,7 +100,7 @@ struct CardData {
                      imageName: "08-Strength",
                      keyWordUpright: "內在力量，勇氣，說服力，影響力，同情心",
                      keyWordReversed: "自我懷疑，虛弱，不安全感",
-                     describe: "力量牌中出現了一隻兇猛的獅子以及一位身穿白袍看似溫順柔弱的女人，溫柔的女人用屬於她的方式馴服了屬於大自然的兇猛野獸。看似矛盾帶有衝突的畫面展現了所謂的「力量」。"),
+                     describe: "力量象徵勇氣、耐心和情感的控制。一名女性用柔和的方式掌控了一頭獅子，這象徵著內在的力量和自我控制，而不是蛮力。"),
                 
             CardInfo(cardID: 10,
                      cardType: "Major",
@@ -109,7 +109,7 @@ struct CardData {
                      imageName: "09-TheHermit",
                      keyWordUpright: "沉思，尋求真相，內省，獨處，內在指導",
                      keyWordReversed: "隔離，孤獨，孤立，迷失方向",
-                     describe: "畫面中的隱修者，是一個非常有智慧的長者，手上提著的燈籠散發出黃色的光芒、象徵著智慧與生命之光，這道光指引著隱士前進，也幫助隱修者像引路人般帶著其他未知迷茫、追求真相的人們一齊像前。"),
+                     describe: "隱士代表內省、智慧和靈性尋求的孤獨旅程。他拿著一個燈籠，照亮自己的路程，並提醒我們，有時候，答案在內心深處等待著被發現。"),
                 
             CardInfo(cardID: 11,
                      cardType: "Major",
@@ -118,7 +118,7 @@ struct CardData {
                      imageName: "10-WheelOfFortune",
                      keyWordUpright: "好運，業力，生命週期，命運，轉折點",
                      keyWordReversed: "運氣不好，難以抗拒，破壞週期",
-                     describe: "命運之輪是一張充分展現了神祕學及靈性哲學的一張牌，畫面中四個角落分別代表了四元素的固定星座。象徵火元素的獅子，象徵土元素的金牛，象徵風元素的水瓶，以及用老鷹替代天蠍的水元素。"),
+                     describe: "命運之輪象徵命運的變化、運氣和週期性。圖中的輪子轉動，提醒我們，生活中的起伏是不可避免的，但也意味著新的機會。"),
                 
             CardInfo(cardID: 12,
                      cardType: "Major",
@@ -127,7 +127,7 @@ struct CardData {
                      imageName: "11-Justice",
                      keyWordUpright: "正義，公平，真理，因果，法律",
                      keyWordReversed: "不公平，缺乏責任感，不誠實",
-                     describe: "正義牌帶我們去省思，所謂的黑白、是非、對錯等二元性的概念，是來自我們的「標準」，而這樣的標準是從何而來呢？是如何形成的？真的帶我們人生走向更寬廣嗎？或者只是使我們限縮在狹隘的視野當中呢？值得我們重新去自我覺察。"),
+                     describe: "正義代表公平、平衡和道義的權威。她坐在寶座上，手持天秤和劍，象徵公正的斷言。這張牌鼓勵我們堅持正義和道德。"),
                 
             CardInfo(cardID: 13,
                      cardType: "Major",
@@ -136,7 +136,7 @@ struct CardData {
                      imageName: "12-TheHangedMan",
                      keyWordUpright: "暫停，投降，放手，新視角",
                      keyWordReversed: "延誤，阻力，停滯，猶豫不決",
-                     describe: "牌裡被倒吊懸掛的男人並非因為犯錯而被逞罰，他將自己吊掛起來是為了追求更高等的靈性超脫，打破原有視角與觀念。透過身體上的苦行修練，來證實自己對高等智慧的渴求。這種行為在中古世紀是會被讚揚的一種行為，並且受到尊敬，也透過讓自身的肉體受到嚴苛的試煉來表達對教會的忠誠。"),
+                     describe: "吊人象徵著犧牲、洞察和自我發現的轉變。他頭下腳上地懸吊，表現出逆境中的冷靜和脫離世俗觀點，帶來新的洞察。"),
                 
             CardInfo(cardID: 14,
                      cardType: "Major",
@@ -145,7 +145,7 @@ struct CardData {
                      imageName: "13-Death",
                      keyWordUpright: "結局，變化，轉變，過渡",
                      keyWordReversed: "害怕變化，堅持，停滯，衰變",
-                     describe: "死神牌的意涵非常豐沛，有著死亡、蛻變、進化、毀滅、創造。各種生與死的不斷循環，不管是肉體還是心靈的生與死。"),
+                     describe: "死神代表變革、終結和重生的不可避免。死神出現時，表示必須放下過去，以實現內在的轉變和新的開始。"),
                 
             CardInfo(cardID: 15,
                      cardType: "Major",
@@ -154,7 +154,7 @@ struct CardData {
                      imageName: "14-Temperance",
                      keyWordUpright: "平衡，適度，耐心，尋找意義",
                      keyWordReversed: "不平衡，過度，自我修復，調整",
-                     describe: "節制牌雖然名為節制，但牌意好像跟節制沒有太多的連結，比起來更像是調節、平衡、混合、結合。也代表事件處在一個適宜的階段，不好也不壞的狀態，有種安穩的感覺。​"),
+                     describe: "節制象徵和諧、平衡和靈性融合的力量。一名天使站在水中，將兩杯的液體混合，代表融合對立的力量，創造和諧。"),
                 
             CardInfo(cardID: 16,
                      cardType: "Major",
@@ -163,7 +163,7 @@ struct CardData {
                      imageName: "15-TheDevil",
                      keyWordUpright: "陰暗面，依戀，成癮，限制",
                      keyWordReversed: "自由，釋放，恢復控制",
-                     describe: "惡魔牌背後的意涵可以解釋成在修行的道路上我們看見了心靈力量與思考的偉大，心靈不只可以向上追求神性，卻也會因為過度的依戀俗世的物質而受到束縛。"),
+                     describe: "惡魔代表束縛、誘惑和依附的權力。圖中有一對男女被牽制在惡魔的鏈子下，提醒我們物慾和負面情感的困擾。"),
                 
             CardInfo(cardID: 17,
                      cardType: "Major",
@@ -172,7 +172,7 @@ struct CardData {
                      imageName: "16-TheTower",
                      keyWordUpright: "突如其來的變化，動盪，混亂，啟示，覺醒",
                      keyWordReversed: "個人轉變，懼怕變化，避免災難",
-                     describe: "一道閃電以迅雷不及掩耳的速度擊中高聳雲端的塔，有一對男女從至高處迅速往下墜，露出驚恐不已的表情。不僅如此，這座高塔似乎隨時都有崩塌的危險性。"),
+                     describe: "塔象徵驚人的改變、突變和突破。一座塔被雷擊中，頂部被炸飛，人們從中墜落。"),
                 
             CardInfo(cardID: 18,
                      cardType: "Major",
@@ -181,7 +181,7 @@ struct CardData {
                      imageName: "17-TheStar",
                      keyWordUpright: "希望，信念，目的，更新，靈性",
                      keyWordReversed: "缺乏信心，絕望，不信任，脫節",
-                     describe: "星星牌出現在高塔牌的後面，象徵著崩壞毀滅後的希望。星星牌象徵著大自然的生生不息與暗濤洶湧，告訴我們大自然的力量有多麼的巨大、相對的人類的力量又有多麼的渺小。"),
+                     describe: "星星代表希望、啟示和夢想的實現。一名女性倒在河邊，倒出七顆星星，象徵著靈感和心靈的光輝。這張牌提醒我們保持信念，追求夢想。"),
                 
             CardInfo(cardID: 19,
                      cardType: "Major",
@@ -190,7 +190,7 @@ struct CardData {
                      imageName: "18-TheMoon",
                      keyWordUpright: "幻覺，恐懼，焦慮，潛意識，直覺",
                      keyWordReversed: "釋放恐懼，壓抑情緒，內心困惑",
-                     describe: "月亮這張牌也代表著幻覺，在夜晚中透過月光，其實能見度非常有限，不像在太陽下一覽無遺，有時我們在月光下可能會被黑暗的角落，不清楚的階梯誤導，就像被迷妄和害怕與恐懼像是迷霧般遮蓋我們雙眼。"),
+                     describe: "月亮象徵幻覺、情感迷惑和深層情感。在夜晚的沼澤中，月亮的光照亮了我們的路，但也帶來了不確定性和幻覺。"),
                 
             CardInfo(cardID: 20,
                      cardType: "Major",
@@ -199,7 +199,7 @@ struct CardData {
                      imageName: "19-TheSun",
                      keyWordUpright: "積極，有趣，溫暖，成功，活力",
                      keyWordReversed: "內心的孩子，情緒低落，過分樂觀",
-                     describe: "太陽從後方照耀了大地，太陽的熱情並沒有一絲的偏好或偏頗，這般溫暖與熱情不只照耀在人們身上，同時也照耀了世間萬物、向日葵、白馬、土地，暗示著大自然的博愛與公平，並非只有人類才能得到這份祝福！"),
+                     describe: "太陽代表光明、喜悅和成功的陽光。兩個孩子在太陽下跳舞，象徵著無憂無慮和生活的快樂時光。這張牌帶來陽光明媚的能量。"),
                 
             CardInfo(cardID: 21,
                      cardType: "Major",
@@ -208,7 +208,7 @@ struct CardData {
                      imageName: "20-Judgement",
                      keyWordUpright: "審判，重生，內在召喚，反思",
                      keyWordReversed: "缺乏自我意識，懷疑，自我厭惡",
-                     describe: "天使的號角聲，代表聽見新的契機，紅十字旗幟，象徵著面臨到人生的十字路口，也就是抉擇、轉捩點的時刻到來。 畫面的色彩感覺像是從黑暗轉為黎明再起，天使的出現讓人感覺溫暖與親切，大家聽見了天使的號角聲，歡欣鼓舞迎接天使的到來。"),
+                     describe: "審判象徵覺醒、責任和重新評估。天使吹響號角，人們從墳墓中站起來，這象徵著精神覺醒和自我評估的時刻。"),
                 
             CardInfo(cardID: 22,
                      cardType: "Major",
@@ -217,7 +217,7 @@ struct CardData {
                      imageName: "21-TheWorld",
                      keyWordUpright: "完成，整合，成就，旅行",
                      keyWordReversed: "未完成，捷徑，延誤 ，失望，失敗",
-                     describe: "世界牌的出現通常代表現階段的任務已經完成，經過了審判牌的自我檢討與改進後，你很清楚的知道自己缺乏的是什麼，對於原本的事物有了全新的認知，這時候的你已經到達了一個全新的境界。"),
+                     describe: "世界代表完成、成就和生命的圓滿。一名女性站在圓圈中，象徵著達到目標和達到高度。這張牌標誌著成功的結束。"),
                 
             CardInfo(cardID: 23,
                      cardType: "Wands",
@@ -226,7 +226,7 @@ struct CardData {
                      imageName: "Wands01",
                      keyWordUpright: "靈感，力量，創造力，起點，潛力",
                      keyWordReversed: "拖延，缺乏動力，權衡",
-                     describe: "在一片銀灰色的天空下，一只白色的手從一朵圓胖的雲中伸出，手中握著一根樹枝，上面有葉子和纖細的次級枝幹，代表著權杖。在左方遠處是一系列的山脈，其中坐落著一座城堡。前方有一條溪流，水清澈見底，周圍環繞著翠綠的樹木。"),
+                     describe: "這是一張充滿活力和潛力的牌，象徵著新的創造力和機會的開始。它猶如一支被點燃的火把，鼓勵我們追求自己的目標，勇敢地踏上新的冒險之旅。"),
                 
             CardInfo(cardID: 24,
                      cardType: "Wands",
@@ -235,7 +235,7 @@ struct CardData {
                      imageName: "Wands02",
                      keyWordUpright: "未來計劃，進度，決策，發現",
                      keyWordReversed: "害怕改變， 害怕未知，缺乏計劃",
-                     describe: "一個戴著紅帽子和橙色束褲的男人，右手拿著一個小地球，左手拿著一根木棍，站在一座城堡的屋頂上。他凝視著被山脈和綠樹環繞的海灣。另一根木棍則安裝在他身後屋頂的牆上。"),
+                     describe: "在這張牌中，我們看到一個人站在城堡的高處，手持兩根權杖，遠望遠方。它代表著計劃和選擇的時刻，需要思考未來的方向和抉擇。"),
                 
             CardInfo(cardID: 25,
                      cardType: "Wands",
@@ -244,7 +244,7 @@ struct CardData {
                      imageName: "Wands03",
                      keyWordUpright: "準備，遠見，企業擴張",
                      keyWordReversed: "缺乏遠見，拖延，妨礙長期目標",
-                     describe: "在一片金色天空下，一名男子站在峭壁的頂峰，他背對著我們。他身穿鮮豔的長袍，頭上系著一條頭巾，棕色的頭髮從頭巾中露出。他正在望著面前的大海，海的邊緣有山脈。海上漂浮著許多船隻。在男子的兩側各有一根木棍，第三根棍子握在他的左手中。"),
+                     describe: "在這裡，我們看到一個人站在海邊，展望遠方，三根權杖豎立在他身邊。這張牌象徵著計劃的實現和未來的展望，我們已經開始看到成功的曙光。"),
                 
             CardInfo(cardID: 26,
                      cardType: "Wands",
@@ -253,7 +253,7 @@ struct CardData {
                      imageName: "Wands04",
                      keyWordUpright: "慶祝，和諧，婚姻，家庭，社區",
                      keyWordReversed: "缺乏支持，短暫，家庭衝突，溝通中斷，過渡",
-                     describe: "在一片金色的天空下，四根帶有水晶尖的木杖被栽種在角落，形成一個方形。一個由鮮花搭建的帷幕覆蓋在木杖上，讓人聯想到傳統猶太婚禮或婚禮中的帳棚。在遠處，一群穿著長袍的人手持花束站著。他們身後是一座大城牆、瞭望塔和一座豪華的城堡。"),
+                     describe: "代表著穩定和慶祝的時刻。在一個節慶場合中，人們慶祝成功，四根權杖支撐著花圈，象徵著穩固的基礎和家庭的和諧。"),
                 
             CardInfo(cardID: 27,
                      cardType: "Wands",
@@ -262,7 +262,7 @@ struct CardData {
                      imageName: "Wands05",
                      keyWordUpright: "分歧，競爭，爭論，緊張，衝突",
                      keyWordReversed: "避免衝突，多樣性，尊重差異",
-                     describe: "五名男子站在堅固但不平坦的地面上，每人手持一根木質棍子，似乎陷入了混戰之中。他們的棍子隨意地舉在頭頂上，相互碰撞，給人一種激烈競爭的印象。這些男子穿著不同顏色的普通T恤、帽子、長襪和鞋子。天空是藍色的，沒有一絲雲彩。"),
+                     describe: "這張牌描繪了一場競爭和衝突的場景，五根權杖交錯在一起，人們爭奪優勢。它提醒我們在團隊中解決分歧的重要性。"),
                 
             CardInfo(cardID: 28,
                      cardType: "Wands",
@@ -271,7 +271,7 @@ struct CardData {
                      imageName: "Wands06",
                      keyWordUpright: "公眾認可，勝利，進步，自信",
                      keyWordReversed: "自負，壞名聲，缺乏自信，失寵",
-                     describe: "一名頭戴勝利花冠的年輕男子騎在一匹白馬上，穿過一群為他歡呼的人群。白馬身披著色彩繽紛的遊行披風。他右手握著一根頂端裝飾著花冠的權杖，左手握著馬的韁繩。其他五根權杖由人群握著。"),
+                     describe: "象徵著勝利和認可。一位勝利者騎著馬，人們為他鼓掌，這張牌代表著成功的到來，並贏得了他人的尊重和讚譽。"),
                 
             CardInfo(cardID: 29,
                      cardType: "Wands",
@@ -280,7 +280,7 @@ struct CardData {
                      imageName: "Wands07",
                      keyWordUpright: "挑戰，競爭，毅力，防禦，保持控制力",
                      keyWordReversed: "放棄，不知所措，過度保護",
-                     describe: "一個男人站在山頂，雙手伸直握著一根長木棍。他被描繪成一個守勢的人，似乎正在對抗他的敵人。他穿著普通的衣服，腳上穿著兩隻不同的鞋子。從下方有六根更多的木棍向他進攻，而他則以同樣的方式還擊。"),
+                     describe: "這是一張表現出防守立場和堅持信念的牌。一個人站在高地上，七根權杖向下指，面對挑戰，要捍衛自己的立場。"),
                 
             CardInfo(cardID: 30,
                      cardType: "Wands",
@@ -289,7 +289,7 @@ struct CardData {
                      imageName: "Wands08",
                      keyWordUpright: "快速行動，移動，快速決策，空中旅行",
                      keyWordReversed: "延誤，沮喪， 驚慌，等待，減速",
-                     describe: "根木棍正在高速飛快地穿越空中。在背景中，有一條清澈的藍色河流自由流動，周圍是翠綠的小丘。天空是藍色的。"),
+                     describe: "這張牌顯示快速的進展和動力。八根權杖迅速飛過天空，這可能帶來快速的變化和重要的消息。"),
                 
             CardInfo(cardID: 31,
                      cardType: "Wands",
@@ -298,7 +298,7 @@ struct CardData {
                      imageName: "Wands09",
                      keyWordUpright: "勇氣，毅力，信念測試，韌性",
                      keyWordReversed: "邊緣，防守，猶豫，偏執狂，疲憊，質疑動機",
-                     describe: "一個疲憊的男人站在防禦姿勢中，緊握著一根觸地的木杖。他的額頭上纏著繃帶，表明他在戰鬥中受傷。在他的身後，有八根不同大小的木杖牢牢地插在地面上，排列成一個柵欄。背景是一連串翠綠的小丘和藍天。"),
+                     describe: "象徵著堅持和恢復的能力。在困難時刻，我們能夠保持毅力，儘管受傷，但仍然準備應對挑戰。"),
                 
             CardInfo(cardID: 32,
                      cardType: "Wands",
@@ -307,7 +307,7 @@ struct CardData {
                      imageName: "Wands10",
                      keyWordUpright: "負擔，責任，努力，壓力，成就",
                      keyWordReversed: "考慮太多，逃避責任，壓力過大，精疲力盡",
-                     describe: "一個男子拿著十根長棍的沉重束包，正在往遠處的一所房子走去。這些棍子按照正確的順序展開，高高超過他的頭頂。他的頭似乎深深埋在束包的中間。他的住所附近有一些蒼翠的樹木和幾座房屋。天空是晴朗的藍色，預示著美好的一天。"),
+                     describe: "代表負擔和壓力的高峰。一個人背負著十根權杖，負擔重重。這張牌提醒我們需要釋放部分負擔，以減輕壓力。"),
                 
             CardInfo(cardID: 33,
                      cardType: "Wands",
@@ -316,7 +316,7 @@ struct CardData {
                      imageName: "Wands11",
                      keyWordUpright: "熱情，探索，發現，自由精神",
                      keyWordReversed: "新思想挫折，悲觀情緒，缺乏方向，製造衝突",
-                     describe: "一個年輕男子，穿著黃色的服裝，上面有蝾螈圖案，獨自站在一片荒涼的景色中。他手持一根稍微高出幾英寸的木杖，自信地望著它。他還戴著一頂用羽毛裝飾的圓頂禮帽。"),
+                     describe: "這位青年探險家象徵著好奇心和冒險精神。他持有一根權杖，表示對新奇的探索和冒險的渴望。"),
                 
             CardInfo(cardID: 34,
                      cardType: "Wands",
@@ -325,7 +325,7 @@ struct CardData {
                      imageName: "Wands12",
                      keyWordUpright: "活力，激情，慾望，動作，冒險，衝動",
                      keyWordReversed: "憤怒，衝動，魯莽，能量分散，延遲，沮喪",
-                     describe: "在一片沉悶的沙漠上，一位年輕的騎士騎著一匹淺棕色的馬，熱情地朝著一個方向奔馳而去。他穿著一整套盔甲，頭上披著一條黃色的蓬鬆披肩，上面裝飾著蝾螈圖案。他的頭盔上有一根紅色的羽毛，看起來像火焰一樣。盔甲也有相同顏色的羽毛。他的左臂握住了馬的韁繩，而右臂則抬起了一個權杖。"),
+                     describe: "代表著冒險和熱情。這是一位充滿活力和決心的騎士，勇敢地追求目標，並對冒險充滿熱情。"),
                 
             CardInfo(cardID: 35,
                      cardType: "Wands",
@@ -334,7 +334,7 @@ struct CardData {
                      imageName: "Wands13",
                      keyWordUpright: "勇氣，決心，喜悅，繁榮，溫暖，活力",
                      keyWordReversed: "畏首畏尾，咄咄逼人，自私，嫉妒，不安全感",
-                     describe: "在晴朗的藍天下，戴著金色皇冠的皇后坐在一個寶座上，右手握著開花的木棍，左手則捧著一束新鮮的向日葵。她身穿淺灰色披風和金黃色長袍。寶座的兩側裝飾著面對相反方向的獅子，而背後則有相同的獅子和向日葵圖案。一隻黑貓靜靜地坐在皇后的腳下。"),
+                     describe: "這位皇后擁有強烈的領導力和決心。她具有創造力、熱情和毅力，鼓勵他人追求目標。"),
                 
             CardInfo(cardID: 36,
                      cardType: "Wands",
@@ -343,7 +343,7 @@ struct CardData {
                      imageName: "Wands14",
                      keyWordUpright: "天生的領導者，遠見，企業家，榮譽，克服挑戰",
                      keyWordReversed: "衝動，倉促，無情，霸道，過高的期望",
-                     describe: "一個國王般的形象坐在一個蓋有布的寶座上，寶座放在一個灰色石平台上。他一手握著一根由樹枝製成的長木棍，另一隻手則放在身旁。他身穿明亮的橙色長袍，頭上戴著一頂金色的皇冠，皇冠的形狀像小火焰。他的身後有一件與披風顏色相配的帆布結構，上面設計有黑色的獅子和一條黑色的蜥蜴正在吃自己的尾巴，形成一個圓圈。在寶座附近，有一隻小黑蜥蜴坐著。"),
+                     describe: "象徵著創造力和勇氣的國王。他是一個決定性的領袖，有能力實現目標並激勵他人。"),
                 
             CardInfo(cardID: 37,
                      cardType: "Cups",
@@ -352,7 +352,7 @@ struct CardData {
                      imageName: "Cups01",
                      keyWordUpright: "愛情，新關係，同情心，創造力 ，靈性，直覺",
                      keyWordReversed: "情感上的損失，創造力受阻，壓抑的情緒",
-                     describe: "一隻白色的手，輻射射線，從一個手持金色W刻杯的雲中投射出來。從杯子裡，五股水流流入盛滿荷花的海水中。在杯口上方可以看到一隻在其喙上有一個小的聖餐晶片的鴿子。"),
+                     describe: "這張牌代表著愛、情感和新的感情開始。通常描繪為一只盛滿愛的聖杯，象徵著愛情的重新點燃和新的感情可能性。"),
                 
             CardInfo(cardID: 38,
                      cardType: "Cups",
@@ -361,7 +361,7 @@ struct CardData {
                      imageName: "Cups02",
                      keyWordUpright: "團結 ，夥伴關係，相互吸引，聯繫",
                      keyWordReversed: "分手，不和諧，不信任，溝通中斷，緊張",
-                     describe: "一個男人和一個女人正在交換金杯，同時盯著對方的眼睛，這似乎是婚禮的一部分。她穿著一件帶有月桂冠的白色長袍，同時穿著時髦的服裝，杯子上方是一隻帶翅膀的獅子頭，兩隻蛇交織在一起，掛在這對夫婦之間。在背景中，青翠的小丘上有一個小房子。"),
+                     describe: "這是兩人之間的愛情和合作的象徵。通常描繪為兩個人分享一杯，表示深刻的感情聯繫。"),
                 
             CardInfo(cardID: 39,
                      cardType: "Cups",
@@ -370,7 +370,7 @@ struct CardData {
                      imageName: "Cups03",
                      keyWordUpright: "慶祝，友誼，創造力，合作",
                      keyWordReversed: "過度放縱，八卦，孤立，獨處，”第三者”",
-                     describe: "在湛藍的天空下，三名穿著漂亮長袍的年輕女子在一個圈子裡歡快地跳舞，每個人拿著一個杯子。他們的手臂高高舉起每個人的頭部，好像是為了慶祝一個場合。中間的女人背對著她的背部跳舞，而另外兩個則在相反方向的兩側，微笑著。他們的頭上裝飾著花圈。他們所站立的地面充滿了樹葉，水果和植物。"),
+                     describe: "代表著共慶和友情的喜悅。通常描繪為三位朋友舉杯慶祝，象徵著歡樂的時光和社交聚會。。"),
                 
             CardInfo(cardID: 40,
                      cardType: "Cups",
@@ -379,7 +379,7 @@ struct CardData {
                      imageName: "Cups04",
                      keyWordUpright: "冥想，沉思，虔誠，重新評估",
                      keyWordReversed: "檢視定位，退卻，逃避",
-                     describe: "盤腿坐在樹腳下的小伙子看上去全神貫注於自己。接下來，對他來說，一團小雲伸出來的手臂正在給他杯水，但他似乎沒有注意到。在他面前，又站了三個杯子。他坐在那裡的土地是綠色和郁鬱蔥蔥的，遠處可以看到一座雪山。"),
+                     describe: "這張牌揭示了內省和不滿的情感。一個人坐在樹下，三杯前的一杯被忽視，暗示著需要反思和內在平衡。"),
                 
             CardInfo(cardID: 41,
                      cardType: "Cups",
@@ -388,7 +388,7 @@ struct CardData {
                      imageName: "Cups05",
                      keyWordUpright: "遺憾，悲傷，自憐 ，失敗，失望，悲觀",
                      keyWordReversed: "接受，繼續前進，尋求和平 ，自諒",
-                     describe: "在一片灰濛蒙的天空下，一個戴著黑色斗篷的男性人物似乎在羞愧和絕望中隱藏著自己的臉，站在一片荒涼的風景上。他的腳附近有五個杯子，其中三個掉下了，裡面的東西倒在了地上，另外兩個則站在他的背後。在他的面前是一條流淌著大水的河，一條城堡橫穿其中。在他的右邊是一座橫跨河的橋樑，可能是通往城堡的一條路。"),
+                     describe: "象徵失望和悲傷。一個人站在倒下的三杯前，但仍有兩杯是完整的，提醒著應該專注於未來的希望。"),
                 
             CardInfo(cardID: 42,
                      cardType: "Cups",
@@ -397,7 +397,7 @@ struct CardData {
                      imageName: "Cups06",
                      keyWordUpright: "重溫過去，童年的回憶，純真，歡樂 ，康復",
                      keyWordReversed: "過去的生活，寬恕，缺乏娛樂 ，離開家，獨立",
-                     describe: "該卡片在一個貧瘠的花園中展示了六個裝有五角白花的杯子，周圍是幾座老建築。一個小男孩在將它提供給一個小孩時聞到其中一個杯子裡的花。在背景中，一個老人似乎正走出花園。上面的天空是湛藍的。"),
+                     describe: "代表著童年回憶和純真的愛。通常描繪為一個小孩給另一個小孩送花，表達友情和無私的情感。"),
                 
             CardInfo(cardID: 43,
                      cardType: "Cups",
@@ -406,7 +406,7 @@ struct CardData {
                      imageName: "Cups07",
                      keyWordUpright: "機會，選擇，如意算盤 ，做白日夢",
                      keyWordReversed: "缺乏目標，轉移注意力，困惑 ，被選擇所淹沒",
-                     describe: "一個身材矮小的人，可能是一個男人，背對著我們，在他的胳膊上，一半舉起七個杯子，漂浮在浮雲上。每個杯子上都會出現給他的不同尋常的禮物-蛇，人的頭，遮蓋的身影，塔，月桂花環，寶藏和龍。"),
+                     describe: "這張牌顯示選擇和幻想的多樣性。一個人面對七個杯子，每個杯子都代表不同的願望和選擇，需要謹慎抉擇。"),
                 
             CardInfo(cardID: 44,
                      cardType: "Cups",
@@ -415,7 +415,7 @@ struct CardData {
                      imageName: "Cups08",
                      keyWordUpright: "失望，遺棄，退縮，逃避現實",
                      keyWordReversed: "再試一次，猶豫不決，迴避，害怕改變，害怕損失",
-                     describe: "在陰沉的天空下，月牙露出悲傷的新月，一個穿著紅色斗篷，手裡拿著拐杖的年輕人似乎要離開了。這個地方是岩石，周圍是高聳的岩石，可能是廣闊海洋的入口。在最前面，有一排五個杯子，上面放著三個杯子，前兩個和第三個之間有很大的間隙。"),
+                     describe: "象徵著離開過去的情感和尋求更高層次的精神滿足。一個人離開了八個杯子，踏上心靈探索之旅。"),
                 
             CardInfo(cardID: 45,
                      cardType: "Cups",
@@ -424,7 +424,7 @@ struct CardData {
                      imageName: "Cups09",
                      keyWordUpright: "知足，滿意，感激，願望成真",
                      keyWordReversed: "自鳴得意，唯物主義，不滿，放縱",
-                     describe: "一個中年壯壯的男人坐在板凳上，雙臂交叉在一個金色的房間裡，看起來很高興和滿意。他穿著整齊，穿著紅色的頭飾，配以羽毛。在他的後面是一張圓形的桌子，桌子上覆蓋著藍色的布，從上面到地板上依次排列著九個空杯子。"),
+                     describe: "代表著心願成真和內在滿足。通常描繪為一個人坐在九個豐滿的杯子前，表示滿足的愿望。"),
                 
             CardInfo(cardID: 46,
                      cardType: "Cups",
@@ -433,7 +433,7 @@ struct CardData {
                      imageName: "Cups10",
                      keyWordUpright: "神聖的愛，幸福的人際關係，和諧，結盟，實現，夢想成真",
                      keyWordReversed: "脫節，價值觀錯位，破碎的夢想，家庭破裂，家庭不和諧",
-                     describe: "一個看起來幸福快樂相愛的男人和一個女人在腰間互相抱著。接下來，對他們來說，兩個孩子握著他們的手，在歡樂中旋轉。他們被一個可愛的小房子，綠色的草地，茂盛的樹木和一條河所包圍。它們上方是湛藍的天空，上麵點綴著十杯彩虹拱門。"),
+                     describe: "這是家庭幸福和和諧的象徵。一家人站在一起，看著彩虹，象徵著完美的家庭生活。"),
                 
             CardInfo(cardID: 47,
                      cardType: "Cups",
@@ -442,7 +442,7 @@ struct CardData {
                      imageName: "Cups11",
                      keyWordUpright: "創造機會，直覺訊息，好奇心，可能性，驚喜，夢想，敏感",
                      keyWordReversed: "情感不成熟，不安全感，失望，直覺懷疑，創意障礙",
-                     describe: "一個年輕人穿著一件花卉印花藍色束腰外衣，繫著一條皮帶和一條偏心的貝雷帽，上面附有一條長而飄逸的圍巾。他站在海邊，右手拿著金杯，左手放在皮帶上，他似乎在舉杯。杯子裡冒出一條小魚，顯然在和他說話。"),
+                     describe: "這位青年帶著情感和創造力，探索新的感情和藝術表現。他是一個充滿想像力的夢想家。"),
                 
             CardInfo(cardID: 48,
                      cardType: "Cups",
@@ -451,7 +451,7 @@ struct CardData {
                      imageName: "Cups12",
                      keyWordUpright: "隨心所欲，理想主義者，浪漫，創意，魅力，想像力，美麗",
                      keyWordReversed: "想像力過度，不切實際，嫉妒，喜怒無常",
-                     describe: "在湛藍的天空下，看到一個年輕的騎士騎著白馬，拿著一個大金杯。他戴著銀色的盔甲，上面裝飾著魚的符號，戴著銀色的頭盔，上面舉著面具。他的馬往下看，以緩慢的速度越過一條小溪。在背景中，有森林覆蓋的山脈和懸崖。"),
+                     describe: "代表著浪漫和感性。這是一位追求夢想和愛情的騎士，充滿情感和熱情。"),
                 
             CardInfo(cardID: 49,
                      cardType: "Cups",
@@ -460,7 +460,7 @@ struct CardData {
                      imageName: "Cups13",
                      keyWordUpright: "富有同情心，關懷，情緒穩定，直覺，冷靜，舒適",
                      keyWordReversed: "不安全感，依賴性，自我保護，自我的愛",
-                     describe: "聖杯皇后是一位身穿銀袍和金冠的迷人女士，坐在海邊邊緣的石座上，上面飾有海仙女，海螺貝殼和魚。她的腳靠在寶座附近堆積的彩色鵝卵石上。她雙手捧著一個金杯，欽佩地盯著它。杯子的把手形狀像天使，而蓋子則類似於帶有微型尖頂和十字架的教堂的屋頂。她上方的天空是明亮的藍色，沒有一點點雲。"),
+                     describe: "象徵著情感和直覺的力量。這位皇后充滿愛和同情，並能夠理解他人的情感需求。"),
                 
             CardInfo(cardID: 50,
                      cardType: "Cups",
@@ -469,7 +469,7 @@ struct CardData {
                      imageName: "Cups14",
                      keyWordUpright: "情感均衡，富有同情心，外交 ，控制",
                      keyWordReversed: "冷漠，情緒低落，不好的建議，喜怒無常，情緒操縱",
-                     describe: "聖杯國王身著藍色長袍，身穿紅色邊界的金斗篷，坐在波濤洶湧的大海中間的灰色石頭板上的貝殼狀寶座上，輕鬆自在。他戴著王冠和一條魚a項鍊。他的右手握著金色的聖杯，左手握著裝飾性的權杖。在他的寶座後面，一條魚從右邊跳出大海，一條紅色的船在左邊穩步航行。"),
+                     describe: "這是一位充滿情感智慧和掌控情緒的國王。他能夠保持內在平靜，並提供支持和安慰。"),
                 
             CardInfo(cardID: 51,
                      cardType: "Swords",
@@ -478,7 +478,7 @@ struct CardData {
                      imageName: "Swords01",
                      keyWordUpright: "突破，新思路，頭腦清晰，成功",
                      keyWordReversed: "混亂，重新思考一個想法，模糊的判斷",
-                     describe: "在一片灰蒙蒙且多雲的天空下，一隻散發著白光的手出現在左邊的厚實、羽毛狀的黑雲中。這隻手拿著一把巨大的、雙刃的銀劍，劍尖指向上方。在劍尖上方，有一頂用月桂葉和棕櫚葉裝飾的金冠。在手下方是崎嶇多山的風景。"),
+                     describe: "這張牌代表著清晰的思考、新的洞察和勇氣。它猶如一把鋒利的劍，象徵著智慧的啟示和真理的發現。"),
                 
             CardInfo(cardID: 52,
                      cardType: "Swords",
@@ -487,7 +487,7 @@ struct CardData {
                      imageName: "Swords02",
                      keyWordUpright: "艱難的決定， 猶豫不決，僵局",
                      keyWordReversed: "優柔寡斷，困惑，信息過載，僵局",
-                     describe: "一名年輕的被蒙住眼睛的女子，她雙手各持一把劍，坐在一個灰色平坦的石頭長凳上。她交叉雙臂，將劍以向上的角度指向天空。她身穿一件長及地的白色長袍，眼罩的顏色與袍子相配。背景是一片寧靜平靜的海洋，有著岩石和峭壁，對船只和其他水上交通造成了阻礙。月牙形的月亮在女子右側的天空中閃耀著。"),
+                     describe: "這是一張代表選擇和抉擇的牌。通常描繪為一位盲目蒙住雙眼，手持兩把劍的女性，提醒我們在決策時需要平衡和思考。"),
                 
             CardInfo(cardID: 53,
                      cardType: "Swords",
@@ -496,7 +496,7 @@ struct CardData {
                      imageName: "Swords03",
                      keyWordUpright: "心碎，情緒痛苦，悲傷，傷害",
                      keyWordReversed: "恢復，釋放痛苦，繼續前進，寬恕",
-                     describe: "一顆紅色的心懸浮在空中，被三把劍穿刺，分別在心臟的兩側和中央。這些劍穿透得非常深，從心臟底部穿出。背景中，烏雲密布的灰色天空下傾盆而下的濃密雨滴象徵著悲傷。"),
+                     describe: "象徵著心碎和悲傷。通常描繪為三把劍刺穿一顆心，表達失望和情感上的傷害。"),
                 
             CardInfo(cardID: 54,
                      cardType: "Swords",
@@ -505,7 +505,7 @@ struct CardData {
                      imageName: "Swords04",
                      keyWordUpright: "休息，放鬆，冥想，沉思，休養",
                      keyWordReversed: "精疲力竭，倦怠，壓力，停滯",
-                     describe: "一名騎士／戰士躺在教堂地下室的墓碑上。他雙手合十，描述他在死前的最後幾個小時。在右側，有三把劍懸掛在他上方的牆上，指向下方，而第四把劍水平地放在墓碑下方。在左側，可以看到一扇彩色玻璃窗，描繪了一名女子和一個孩子。"),
+                     describe: "代表休息和恢復。通常描繪為一位休息的騎士，躺在墓地中，表示需要平靜和內在的治療。"),
                 
             CardInfo(cardID: 55,
                      cardType: "Swords",
@@ -514,7 +514,7 @@ struct CardData {
                      imageName: "Swords05",
                      keyWordUpright: "雄心勃勃的野心，不惜一切代價獲勝 ，偷偷摸摸",
                      keyWordReversed: "渴望和解，寬恕，怨恨揮之不去",
-                     describe: "展示了一個穿著綠色和紅色服裝的年輕人，臉上帶著惡毒的表情，左肩上有兩把劍，收集了第三個。他正盯著兩個人，可能是他的敵人，在另一個方向慢慢地行走，作為失敗的標誌。另外兩把劍散落在地上。在上面，天空充滿了灰色的雲層，而勇敢的風吹著男人的頭髮。在相當遠的距離，有一個被丘陵環繞的洶湧波浪的海洋。"),
+                     describe: "這張牌反映了競爭和勝利的代價。一位勝利者拿著三把劍，兩位戰敗者走開，象徵著勝利可能帶來的衝突。"),
                 
             CardInfo(cardID: 56,
                      cardType: "Swords",
@@ -523,7 +523,7 @@ struct CardData {
                      imageName: "Swords06",
                      keyWordUpright: "過渡，拋在後面，繼續前進",
                      keyWordReversed: "情感上的包袱、未解決的問題，抵制過渡",
-                     describe: "一個女人和一個小孩坐在船上，由一名渡船駛向水體，朝向遙遠的景觀。當孩子穿著長袍時，女人的頭被遮住了。在船的右側，水是湍流，而在左側，它是平靜而靜止。六把劍以直立的姿勢被放入船中。"),
+                     describe: "象徵著遠離困境和轉向更好的地方。一艘小船遠離困難的水域，代表著轉變和新的開始。"),
                 
             CardInfo(cardID: 57,
                      cardType: "Swords",
@@ -532,7 +532,7 @@ struct CardData {
                      imageName: "Swords07",
                      keyWordUpright: "背叛，欺騙，逃避某些事情，戰術和策略",
                      keyWordReversed: "坦白承認，自欺欺人，保守秘密",
-                     describe: "一個手裡拿著五把劍的人似乎偷偷溜出了某個營地，可能代表偷竊行為。另外兩把劍站在他身後的地上。遠在左側，可以看到一群士兵，其中一人正在舉起鋒利的武器或旗幟。上面的天空顯得金黃，沒有云彩。"),
+                     describe: "這張牌反映了欺騙和不誠實。一個人偷偷拿走五把劍，但留下兩把，提醒我們小心不誠實的行為。"),
                 
             CardInfo(cardID: 58,
                      cardType: "Swords",
@@ -541,7 +541,7 @@ struct CardData {
                      imageName: "Swords08",
                      keyWordUpright: "負面思想，自我約束，監禁，受害者心理",
                      keyWordReversed: "自由，自我接受，釋放負面思想，開闢新視野",
-                     describe: "蒙著眼睛的女人獨自站在荒蕪潮濕的荒地上、水坑裡。然而，她的腳並沒有完全接觸水。她身上穿著一件長袍。她背後有八把劍，就像一座監獄。在遙遠的距離，在山上可以看到一座城堡，而上面的天空是陰天和灰色。"),
+                     describe: "代表束縛和困境感。一個人被綑綁在八把劍中，但她可以解脫，這張牌表明需要解除限制。"),
                 
             CardInfo(cardID: 59,
                      cardType: "Swords",
@@ -550,7 +550,7 @@ struct CardData {
                      imageName: "Swords09",
                      keyWordUpright: "焦慮，擔憂，恐懼，抑鬱，噩夢",
                      keyWordReversed: "內心的動盪，根深蒂固的恐懼，秘密，釋放憂慮",
-                     describe: "它顯示了一個女人，她的手摀在她的臉上坐在床上，好像她剛剛從夢魘中醒來。她的雙腿上覆蓋著被子上裝飾著花朵和棋盤圖案的星座。床邊有兩個人物互相爭鬥的雕刻。九條劍在床上方水平方向懸掛在牆上。"),
+                     describe: "這是一張代表焦慮和擔憂的牌。一個人坐在床上，面臨九把劍，夜晚的黑暗中擔心著各種事情。"),
                 
             CardInfo(cardID: 60,
                      cardType: "Swords",
@@ -559,7 +559,7 @@ struct CardData {
                      imageName: "Swords10",
                      keyWordUpright: "痛苦的結局，深深的傷口，背叛，損失，危機",
                      keyWordReversed: "恢復，再生，不可避免的結局",
-                     describe: "由一名男子面朝下躺在粗糙的表面上，十個長劍連續刺入他的背部。他的身體下半部分披著紅斗篷。在他面前是一個水體，可能是一個大海，上面是漆黑的天空。在遠離太陽的地方可以看到一個丘陵景觀。"),
+                     describe: "象徵著結束和困境的終結。一個人被十把劍刺穿，但日出在遠處升起，象徵著新的開始。"),
                 
             CardInfo(cardID: 61,
                      cardType: "Swords",
@@ -568,7 +568,7 @@ struct CardData {
                      imageName: "Swords11",
                      keyWordUpright: "新想法，好奇心，對知識的渴望，新的溝通方式",
                      keyWordReversed: "自我表現，空談，沒有行動的，偶然的動作，欺騙",
-                     describe: "在一個草地和粗糙地層的景觀中，一個年輕人站著，用雙手握住劍向上的位置。他穿得很漂亮，綁著一個懸在空中的馬尾辮。上面的天空充滿了洶湧的雲彩，背景展示了樹木和高速流淌的河流。"),
+                     describe: "這位青年是思想和洞察的化身。他持有一把劍，象徵著好奇心和求知的精神，追求真理。"),
                 
             CardInfo(cardID: 62,
                      cardType: "Swords",
@@ -577,7 +577,7 @@ struct CardData {
                      imageName: "Swords12",
                      keyWordUpright: "雄心勃勃，以行動為導向，追求成功，思維敏捷",
                      keyWordReversed: "躁動不專心，脾氣暴躁，精疲力盡，無視後果，不可預測",
-                     describe: "描繪一個穿著閃亮盔甲的年輕人，在戰場上騎著白馬，高高舉起一把劍。他的斗篷裝飾著鳥兒的圖像，當馬高速奔跑時，它會在空中飛舞。馬的馬俱設計有蝴蝶和鳥類的象徵。隨著風暴在背景中猛烈地吹著樹木，暴風的雲層瀰漫在上面的天空。"),
+                     describe: "代表著勇敢和果斷。這是一位騎士，擁有強大的決心和行動力，勇往直前。"),
                 
             CardInfo(cardID: 63,
                      cardType: "Swords",
@@ -586,7 +586,7 @@ struct CardData {
                      imageName: "Swords13",
                      keyWordUpright: "獨立，公正的判斷，明確的界限，直接溝通",
                      keyWordReversed: "情緒過高，容易受到影響，討厭，冷漠殘酷，苦澀",
-                     describe: "穿著長袍設計有白雲和金色皇冠的劍女王坐在蝴蝶圖案雕刻的寶座上。她左手拿著一把劍向左，而她的左手向某人延伸，好像要提供一些東西。在她的上方是一片清澈的藍色春天，可以看到一隻鳥在飛翔。另一方面，巨大的雲層從地平線中湧現出來。"),
+                     describe: "象徵著聰明和洞察力。這位皇后充滿智慧，能夠清晰思考並做出正確的決策。"),
                 
             CardInfo(cardID: 64,
                      cardType: "Swords",
@@ -595,7 +595,7 @@ struct CardData {
                      imageName: "Swords14",
                      keyWordUpright: "心理清晰，智力，權威，真理",
                      keyWordReversed: "安靜的力量，內在真理，濫用權力，操縱，殘忍，虛弱",
-                     describe: "它展示了寶劍國王，坐在寶座上的金色王冠，右手握住寶劍，同時將左手放在膝蓋上。他的左手指上有一枚戒指。他穿著長長的藍色長袍和紫色斗篷。寶座的背面刻有月牙圖案，蝴蝶和天使。在背景中，有樹木和樹葉，以及一些帶有少量積雲的清澈藍天。"),
+                     describe: "這是一位充滿權威和洞察力的國王。他具有清晰的思維和決斷力，能夠理解複雜的情況並做出明智的決策。"),
                 
             CardInfo(cardID: 65,
                      cardType: "Pentacles",
@@ -604,7 +604,7 @@ struct CardData {
                      imageName: "Pentacles01",
                      keyWordUpright: "新的財務或職業機會，表現豐富，繁榮，新冒險",
                      keyWordReversed: "機會錯失，缺乏計劃和遠見，投資不良",
-                     describe: "在銀白色的天空上，帶有白色光芒的手從泡沫狀的雲中彈出，握著金色的五角星。下方肥沃的景觀包括一個充滿百合花和綠草的花園，周圍環繞著綠籬，綠樹成蔭，通往拱門，開滿了葉子和花朵。它有一個通往山的開放式入口。"),
+                     describe: "這張牌象徵著財富、物質豐盛和新的機會。它通常描繪為一個手持一枚錢幣的手，表示物質的開始和繁榮。"),
                 
             CardInfo(cardID: 66,
                      cardType: "Pentacles",
@@ -613,7 +613,7 @@ struct CardData {
                      imageName: "Pentacles02",
                      keyWordUpright: "平衡決策，優先事項，適應變化，時間管理",
                      keyWordReversed: "過度承諾，組織混亂，失去平衡",
-                     describe: "在萬里無雲的灰色天空下，一個人在他的手中玩弄著兩個金幣，這金幣由橡皮筋連接成無限循環。他穿著古怪的橙色服裝，戴著一頂有趣的長帽，向空中抬起頭。他一邊跳舞一邊盯著金幣，表達了某種關注。在他的後面是洶湧的海浪，兩艘船正在向前移動。"),
+                     describe: "代表平衡和選擇。通常描繪為一個人站在海邊，手持兩枚錢幣，需要平衡生活的各個方面。"),
                 
             CardInfo(cardID: 67,
                      cardType: "Pentacles",
@@ -622,7 +622,7 @@ struct CardData {
                      imageName: "Pentacles03",
                      keyWordUpright: "團隊合作，協作，學習，實施",
                      keyWordReversed: "缺乏團隊合作，雜亂無章，群體衝突，不和諧，失調，獨自工作",
-                     describe: "三個人站在大教堂牆壁的拱門下。左邊是一個年輕的男徒弟，他站在長凳上，手裡拿著一些工具，看著其他兩個扮演建築師角色的人。其中一個人看起來像個和尚，身著棕色長袍，頭頂剃光。在他旁邊的是一個穿著古怪服飾的修女。這兩個人拿著一張藍圖，給學徒們指示。三塊五角石在拱門上以裝飾圖案排列，而教堂的牆壁呈灰色。"),
+                     describe: "象徵著合作和專業。通常描繪為三位工匠一起工作，代表團隊合作和專業技能的重要性。"),
                 
             CardInfo(cardID: 68,
                      cardType: "Pentacles",
@@ -631,7 +631,7 @@ struct CardData {
                      imageName: "Pentacles04",
                      keyWordUpright: "省錢，安全，保守，稀缺，控制",
                      keyWordReversed: "超支，貪婪，自我保護，小氣，佔有欲",
-                     describe: "一個穿著紅色衣服的男人，戴著藍色的鑲邊，戴著王冠，坐在一塊立方石頭上，腳擱在地面上平躺的兩個五芒星上。第三個五角星抱在懷裡，而第四個五角星坐在他的王冠上。他的臉上微微一笑，雙眼比平時更黑。背景是現代城市的美麗風景，而上方的天空則是純灰色。"),
+                     describe: "這張牌反映了財富的守護和固守。一個人緊緊抓住四枚錢幣，可能表現出對物質的過分執著。"),
                 
             CardInfo(cardID: 69,
                      cardType: "Pentacles",
@@ -640,7 +640,7 @@ struct CardData {
                      imageName: "Pentacles05",
                      keyWordUpright: "經濟損失，貧窮，缺乏思維，孤立，擔心",
                      keyWordReversed: "從經濟損失，精神貧困中恢復",
-                     describe: "在一個寒冷，漆黑的夜晚，一個男人和一個處於貧困狀態的女人在一個光線充足的教堂美麗的彩色玻璃窗外，拖著自己穿過雪地。該名男子杵著拐杖，脖子上綁著一條小小的東西，而該名女子則用裸露的腳踩在雪地上，披肩在頭上。教堂的外部結構為黑色，玻璃上畫有五個黃色五角形。羅馬數字“V”在五角形上方進行了加密，並在窗的其餘部分覆蓋了一些類似樹葉的圖案。"),
+                     describe: "象徵貧困和困難。通常描繪為兩個人走過寒冷的街道，感到無助和貧困。"),
                 
             CardInfo(cardID: 70,
                      cardType: "Pentacles",
@@ -649,7 +649,7 @@ struct CardData {
                      imageName: "Pentacles06",
                      keyWordUpright: "給予，接受，分享財富，慷慨，慈善",
                      keyWordReversed: "自理，未償債務 ，小氣",
-                     describe: "在灰色的天空下，一個穿著王室裝束，頭上戴著光面布頭巾的男人，正向跪在右邊腳下的乞丐扔幾枚硬幣。左側的另一個乞丐跪下，等待施捨。該名男子的左手天平均勻。在背景中，有一個綠樹成蔭的綠色景觀。六個五角星簡單地以逆時針方式排列，與卡無關。"),
+                     describe: "代表給予和接受。一位富有的人向兩位貧困的人分享錢幣，強調慷慨和幫助他人的價值。"),
                 
             CardInfo(cardID: 71,
                      cardType: "Pentacles",
@@ -658,7 +658,7 @@ struct CardData {
                      imageName: "Pentacles07",
                      keyWordUpright: "長遠眼光，可持續成果，毅力，投資",
                      keyWordReversed: "缺乏長遠眼光，成功或回報有限",
-                     describe: "一個拿著長棍子的年輕人站在一塊已經被七個五芒星形疊加的伐木場旁。他穿著橙色的長袍，欣賞著這個領域。象徵著艱苦奮鬥，力量和奉獻精神，他們需要在生活中脫穎而出。 收穫的田野描繪了成功和勞作，而七個五角星則說明了努力的價值。"),
+                     describe: "這張牌反映了耐心和等待的重要性。一個農夫在看著七枚錢幣的樹，表示需要等待收穫。"),
                 
             CardInfo(cardID: 72,
                      cardType: "Pentacles",
@@ -667,7 +667,7 @@ struct CardData {
                      imageName: "Pentacles08",
                      keyWordUpright: "學徒，重複性任務，掌握，技能發展",
                      keyWordReversed: "自我發展，完美主義， 缺乏熱情，缺乏動力",
-                     describe: "一個年輕人坐在板凳上，一隻手拿著錘子，另一隻手上的鑿子，忙著雕刻出一個五角星。他穿著破爛的衣服。在他旁邊的是一個長長的木樁，其中五個五角星在一條垂直線上相互疊置，而第六個五角星則放在長椅下。在背景中可以看到城鎮的金字塔狀結構，而上方的天空是淡藍色的灰色，沒有云層。"),
+                     describe: "象徵專注和努力工作。一個工匠在專注地雕刻八枚錢幣，強調專業技能和自我提升。"),
                 
             CardInfo(cardID: 73,
                      cardType: "Pentacles",
@@ -676,7 +676,7 @@ struct CardData {
                      imageName: "Pentacles09",
                      keyWordUpright: "豐富，豪華，自給自足，財務獨立，報酬，奢侈",
                      keyWordReversed: "自我價值，對工作的過度投資，忙碌，魯莽的支出，虛假成功",
-                     describe: "在一片金色的天空下，一個睿智而成熟的女人穿著一件帶紅色頭套的沉重的紫色長袍，看到在葡萄園中間行走。一隻小鳥從容地坐在她戴著手套的左手上。葡萄藤上充滿了甜美的葡萄。在背景中，有一個美麗的風景，兩旁是樹木和可愛的房屋。九個五芒星排列整齊，前六個位於女人的右側，其餘三個位於左側。她一邊欣賞那隻小鳥，一邊撫摸著下擺。"),
+                     describe: "代表獨立和自給自足。一個女性站在花園中，身邊有九枚錢幣，象徵著經濟獨立和成功。"),
                 
             CardInfo(cardID: 74,
                      cardType: "Pentacles",
@@ -685,7 +685,7 @@ struct CardData {
                      imageName: "Pentacles10",
                      keyWordUpright: "財富，財務安全，家庭，長期成功，貢獻，遺產，繼承",
                      keyWordReversed: "金融失敗或損失，短暫的成功，缺乏穩定性，資源不足",
-                     describe: "一個老而又聰明的人，頭上長著長長的白頭髮，正坐在一個繁忙的小鎮中間的牌樓外。他穿著皇室披風，上面設計有新月形的月亮，葡萄樹和其他豐富的符號。看到他被家人包圍，包括一對年輕開朗的夫婦和一個小男孩。他的腳旁站著兩隻白狗，其中一隻被他撫摸著。拱門的柱子上刻有徽章符號。在這對年輕夫婦的身後，有高樓大廈和城鎮廣場的灌木叢。 十個五芒星疊加在卡上的不同位置。"),
+                     describe: "這是豐盛和家庭的象徵。一個家庭團聚在城市廣場，象徵著財富、傳統和家庭的和諧。"),
                 
             CardInfo(cardID: 75,
                      cardType: "Pentacles",
@@ -694,7 +694,7 @@ struct CardData {
                      imageName: "Pentacles11",
                      keyWordUpright: "表現，財務機會，技能發展，雄心，願望，勤奮",
                      keyWordReversed: "缺乏進步，拖延，從失敗中學習，缺乏承諾，貪婪，懶惰",
-                     describe: "在金色的明亮天空下，一個年輕人站在充滿鮮花的綠色田野上。他身著淺綠色上衣，戴著一頂紅色的帽子，上面戴著一條圍巾，從頭頂左側流下流過肩膀。他雙手舉著金色的五芒星，將其抬起仔細檢查。在背景中，右邊有一組果樹，還有一片新耕過的田地。更遠的是一連串的山脈。"),
+                     describe: "這位年輕的學徒充滿好奇心，持有一枚錢幣，象徵著對學習和新機會的渴望。"),
                 
             CardInfo(cardID: 76,
                      cardType: "Pentacles",
@@ -703,7 +703,7 @@ struct CardData {
                      imageName: "Pentacles12",
                      keyWordUpright: "努力，生產力，保守，效率，責任感",
                      keyWordReversed: "懶惰，無聊，感覺“卡住”，完美主義 ，執著，無酬工作",
-                     describe: "一個穿著騎士裝甲的年輕人坐在一匹黑馬在乾燥的田野中間。他處於平靜的狀態，拿著金色的五芒星。這匹馬身著王冠，頭飾和馬鞍飾有褶邊。"),
+                     describe: "代表著穩健和責任感。這位騎士努力工作，專注於目標的實現，具有耐心和務實的特質。"),
                 
             CardInfo(cardID: 77,
                      cardType: "Pentacles",
@@ -712,7 +712,7 @@ struct CardData {
                      imageName: "Pentacles13",
                      keyWordUpright: "培育，實用，經濟上提供， 實用性，物質享受，財務安全",
                      keyWordReversed: "自我中心，嫉妒，窒息 ，家庭衝突",
-                     describe: "在金色的天空下，一個代表女王的女人正坐在寶座上，上面雕刻著山羊，兔子，小貓，天使，水果和其他物質物品，並以母親的方式抱著金色的五角星。她穿著一件紅色的禮服，上面是白色的禮服。她身著綠色披風，頂上鑲有帶翼的太陽能磁盤，鑲有金色寶座，確保了她的安全。"),
+                     describe: "象徵著實用性和財務管理能力。這位皇后擁有豐富的資源，同時關心家庭和環境。"),
                 
             CardInfo(cardID: 78,
                      cardType: "Pentacles",
@@ -721,6 +721,6 @@ struct CardData {
                      imageName: "Pentacles14",
                      keyWordUpright: "豐富，繁榮，安全，財富，業務，領導力，紀律性",
                      keyWordReversed: "財務上無能為力，執著於財富和地位，固執，貪婪，放縱",
-                     describe: "戴著金色王冠的國王坐在寶座上，寶座上雕刻著公牛和葡萄樹。他穿著一件長袍，上面印有葡萄樹的圖案，右手握著一個權杖，左手握著一個刻有五角星的硬幣。從長袍下面可以看到他的腳上穿著鎧甲鞋。在他的腳邊有許多花草，藤蔓和不同類型的植物，它們散佈在寶座周圍。在背景幕上，可以看到他的大城堡向左。")]
+                     describe: "這是一位富有和穩定的國王。他是一個成功的企業家，擁有財富和商業智慧。")]
     }
 }
