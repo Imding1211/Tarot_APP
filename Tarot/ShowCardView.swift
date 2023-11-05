@@ -20,8 +20,7 @@ struct ShowCardView: View {
     var body: some View {
         
         ZStack {
-            Image(colorScheme == .light ? "background-light" : "background-dark")
-                .resizable()
+            LinearGradient(gradient: Gradient(colors: [Color("TopColor"), Color("BottomColor")]), startPoint: .topLeading, endPoint: .bottomTrailing)
                 .ignoresSafeArea()
                     
             VStack {
