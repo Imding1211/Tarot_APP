@@ -66,7 +66,7 @@ struct DailyCardView: View {
                         Button {
                             turnCard()
                         } label: {
-                            DailyCardButtonLabel(message: "翻牌", iconName: "arrow.triangle.2.circlepath")
+                            DailyCardButtonLabel(message: "Draw", iconName: "arrow.triangle.2.circlepath")
                         }
                         
                         Spacer()
@@ -82,7 +82,7 @@ struct DailyCardView: View {
                             }
                             
                         } label: {
-                            DailyCardButtonLabel(message: "洗牌", iconName: "repeat")
+                            DailyCardButtonLabel(message: "Shuffle", iconName: "repeat")
                         }
                         
                         Spacer()
