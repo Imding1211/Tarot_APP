@@ -20,7 +20,6 @@ struct SplashScreenView: View {
         }
         else {
             ZStack {
-                
                 Color(.white)
                 
                 VStack {

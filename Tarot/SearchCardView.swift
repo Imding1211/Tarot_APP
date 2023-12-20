@@ -115,7 +115,6 @@ struct SearchCardView: View {
                             }
                         }
                     }
-
                 }
                 .searchable(text: $searchCard)
             }

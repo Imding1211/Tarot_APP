@@ -32,7 +32,6 @@ struct ThreeCardSpreadView: View {
                     .ignoresSafeArea()
                 
                 VStack {
-                    
                     HStack {
                         Spacer()
                         

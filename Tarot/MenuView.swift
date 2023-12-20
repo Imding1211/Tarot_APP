@@ -32,6 +32,12 @@ struct MenuView: View {
                     }
                     
                     NavigationLink {
+                        StarSpreadView()
+                    } label: {
+                        MenuLinkLabel(message: "6 Card Spread")
+                    }
+                    
+                    NavigationLink {
                         SearchCardView()
                     } label: {
                         MenuLinkLabel(message: "Serch Card")

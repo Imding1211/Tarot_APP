@@ -26,7 +26,6 @@ struct DailyCardView: View {
                     .ignoresSafeArea()
                 
                 VStack {
-                    
                     DailyCardTitle(message: cardState > 78 ? cardDatas[cardState-78].englishName : cardDatas[cardState].englishName)
                     
                     Button {
@@ -89,7 +88,6 @@ struct DailyCardView: View {
                     }
                     
                     Spacer()
-                    
                 }
             }
             .navigationTitle("Daily Tarot Draw")
