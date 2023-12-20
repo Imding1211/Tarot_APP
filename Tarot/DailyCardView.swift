@@ -87,7 +87,8 @@ struct DailyCardView: View {
                         
                         Spacer()
                     }
-                    .padding()
+                    
+                    Spacer()
                     
                 }
             }
@@ -124,6 +125,59 @@ struct DailyCardView: View {
     
 }
 
+struct DailyCardTitle: View {
+    
+    let message: String
+    
+    var body: some View {
+        Text(message)
+            .font(.largeTitle)
+            .fontWeight(.heavy)
+            .frame(maxWidth: 300)
+            .foregroundColor(Color.black)
+            .padding(.vertical, 5)
+            .background(Color.white.opacity(0.6))
+            .cornerRadius(20)
+            .shadow(color: .white, radius: 5)
+    }
+}
+
+struct DailyCardButtonLabel: View {
+    
+    let message: String
+    let iconName: String
+    
+    var body: some View {
+        HStack {
+            Text(message)
+            Image(systemName: iconName)
+        }
+        .font(.title3)
+        .fontWeight(.heavy)
+        .frame(maxWidth: 220, maxHeight: 40)
+        .foregroundColor(Color.black)
+        .padding(.vertical, 5)
+        .background(Color.white.opacity(0.6))
+        .cornerRadius(20)
+        .shadow(color: .white, radius: 5)
+    }
+}
+
+struct DailyCardImage: View {
+    
+    let imageName: String
+    
+    var body: some View {
+        Image(imageName)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .opacity(0.8)
+            .cornerRadius(10)
+            .shadow(color: .white, radius: 5)
+            .padding(.vertical, 5)
+    }
+}
+
 struct DailyCardView_Previews: PreviewProvider {
     static var previews: some View {
         
@@ -135,3 +189,4 @@ struct DailyCardView_Previews: PreviewProvider {
 
     }
 }
+

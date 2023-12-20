@@ -94,6 +94,28 @@ struct ShowCardView: View {
     }
 }
 
+struct ShowCardKeyword: View {
+    
+    let position: String
+    let message: String
+    
+    var body: some View {
+        
+        VStack {
+            Text(position)
+                .font(.title3)
+                .fontWeight(.bold)
+                .padding(.vertical, 5)
+            
+            Text(message)
+                .font(.body)
+                .fontWeight(.light)
+                .padding(.vertical, 5)
+        }
+        .foregroundColor(Color("MainColor"))
+    }
+}
+
 struct ShowCardView_Previews: PreviewProvider {
     static var previews: some View {
 

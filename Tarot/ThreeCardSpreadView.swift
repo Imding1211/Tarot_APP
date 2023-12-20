@@ -32,6 +32,21 @@ struct ThreeCardSpreadView: View {
                     .ignoresSafeArea()
                 
                 VStack {
+                    
+                    HStack {
+                        Spacer()
+                        
+                        Button {
+                            withAnimation {
+                                isTimeOn.toggle()
+                            }
+                        } label: {
+                            Image(systemName: "repeat")
+                                .foregroundColor(Color.black)
+                                .padding()
+                        }
+                    }
+                    
                     HStack {
                         ThreeCardShowView(cardID: drawCardsNum[0], imageName: pastCardName, message: "Past", isReversed: pastPosition, isTimeOn: isTimeOn)
                             .dropDestination(for: String.self) { items, location in
@@ -71,37 +86,130 @@ struct ThreeCardSpreadView: View {
                     }
                     
                     ThreeCardDrawView(tasks: drawCardsName)
-                    
-                    HStack {
-                        Button {
-                            withAnimation {
-                                pastCardName = ""
-                                presentCardName = ""
-                                futureCardName = ""
-                                drawCardsNum = [Int](1...78).shuffled()
-                                drawCardsName = CardData().getData().map({ $0.imageName }).shuffled()
-                            }
-                        } label: {
-                            DailyCardButtonLabel(message: "洗牌", iconName: "repeat")
+
+                    Button {
+                        withAnimation {
+                            pastCardName = ""
+                            presentCardName = ""
+                            futureCardName = ""
+                            drawCardsNum = [Int](1...78).shuffled()
+                            drawCardsName = CardData().getData().map({ $0.imageName }).shuffled()
                         }
-                        
-                        Button {
-                            withAnimation {
-                                isTimeOn.toggle()
-                            }
-                        } label: {
-                            DailyCardButtonLabel(message: "開關", iconName: "repeat")
-                        }
-                        
+                    } label: {
+                        ThreeCardButtonLabel(message: "Shuffle", iconName: "repeat")
                     }
                     
-                    
+                    Spacer()
                 }
             }
             .navigationTitle("3 Card Spread")
         }
         .accentColor(Color("MainColor"))
     } 
+}
+
+struct ThreeCardDrawView: View {
+    
+    let tasks: [String]
+    
+    @State var cardDatas: [CardInfo] = CardData().getData()
+    
+    var body: some View {
+     
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 12) {
+                ForEach(tasks, id: \.self) { task in
+                    GeometryReader { geometry in
+                        Image("CardBacks")
+                            .resizable()
+                            .opacity(0.8)
+                            .aspectRatio(contentMode: .fit)
+                            .cornerRadius(5)
+                            .shadow(color: .white, radius: 5)
+                            .scaleEffect(0.9)
+                            .draggable(task)
+                            .rotation3DEffect(Angle(degrees: getPercentage(geo: geometry) * 30), axis: (x: 0.0, y: 1.0, z: 0.0))
+                    }
+                    .frame(width: 100, height: 180)
+                }
+            }
+        }
+    }
+    
+    func getPercentage(geo: GeometryProxy) -> Double {
+        let maxDistance = UIScreen.main.bounds.width / 2
+        let currentX = geo.frame(in: .global).midX
+        return Double(1 - (currentX / maxDistance))
+    }
+}
+
+struct ThreeCardButtonLabel: View {
+    
+    let message: String
+    let iconName: String
+    
+    var body: some View {
+        HStack {
+            Text(message)
+            Image(systemName: iconName)
+        }
+        .font(.title3)
+        .fontWeight(.heavy)
+        .frame(maxWidth: 220, maxHeight: 40)
+        .foregroundColor(Color.black)
+        .padding(.vertical, 5)
+        .background(Color.white.opacity(0.6))
+        .cornerRadius(20)
+        .shadow(color: .white, radius: 5)
+    }
+}
+
+struct ThreeCardShowView: View {
+    
+    let cardID: Int
+    let imageName: String
+    let message: String
+    let isReversed: Bool
+    let isTimeOn: Bool
+    
+    @State var showCardSheet: Bool = false
+    
+    var body: some View {
+        
+        ZStack {
+            RoundedRectangle(cornerRadius: 12)
+                .frame(width: 100, height: 230)
+                .shadow(color: .white, radius: 5)
+                .foregroundColor(Color.gray)
+                .opacity(0.6)
+            
+            VStack {
+                Image(imageName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .cornerRadius(5)
+                    .shadow(color: .white, radius: 5)
+                    .frame(width: 90, height: 150)
+                    .rotationEffect(isReversed ? .degrees(180) : .degrees(0))
+                    .draggable(imageName)
+                    .onTapGesture {
+                        showCardSheet.toggle()
+                    }
+                
+                Text(isTimeOn ? message : "")
+                    .font(.title3)
+                    .frame(maxWidth: 120, maxHeight: 10)
+                    .fontWeight(.heavy)
+                    .foregroundColor(Color.black)
+                    .padding()
+                    .cornerRadius(20)
+                    .shadow(color: .white, radius: 5)
+            }
+        }
+        .sheet(isPresented: $showCardSheet) {
+            ShowCardView(cardState: cardID, isReversed: isReversed)
+        }
+    }
 }
 
 struct ThreeCardSpreadView_Previews: PreviewProvider {
