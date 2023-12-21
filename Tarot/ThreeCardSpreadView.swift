@@ -22,6 +22,11 @@ struct ThreeCardSpreadView: View {
     @State var pastPosition: Bool = false
     @State var presentPosition: Bool = false
     @State var futurePosition: Bool = false
+    
+    @State var pastallowShowCardSheet: Bool = false
+    @State var presentallowShowCardSheet: Bool = false
+    @State var futureallowShowCardSheet: Bool = false
+    
     @State var isTimeOn: Bool = true
     
     var body: some View {
@@ -47,7 +52,7 @@ struct ThreeCardSpreadView: View {
                     }
                     
                     HStack {
-                        ThreeCardShowView(cardID: drawCardsNum[0], imageName: pastCardName, message: "Past", isReversed: pastPosition, isTimeOn: isTimeOn)
+                        ThreeCardShowView(cardID: drawCardsNum[0], imageName: pastCardName, message: "Past", isReversed: pastPosition, isTimeOn: isTimeOn, allowShowCardSheet: pastallowShowCardSheet)
                             .dropDestination(for: String.self) { items, location in
                                 withAnimation {
                                     for item in items {
@@ -56,10 +61,11 @@ struct ThreeCardSpreadView: View {
                                 }
                                 pastCardName = cardDatas[drawCardsNum[0]].imageName
                                 pastPosition = Bool.random()
+                                pastallowShowCardSheet.toggle()
                                 return true
                             }
                         
-                        ThreeCardShowView(cardID: drawCardsNum[1], imageName: presentCardName, message: "Present", isReversed: presentPosition, isTimeOn: isTimeOn)
+                        ThreeCardShowView(cardID: drawCardsNum[1], imageName: presentCardName, message: "Present", isReversed: presentPosition, isTimeOn: isTimeOn, allowShowCardSheet: presentallowShowCardSheet)
                             .dropDestination(for: String.self) { items, location in
                                 withAnimation {
                                     for item in items {
@@ -68,10 +74,11 @@ struct ThreeCardSpreadView: View {
                                 }
                                 presentCardName = cardDatas[drawCardsNum[1]].imageName
                                 presentPosition = Bool.random()
+                                presentallowShowCardSheet.toggle()
                                 return true
                             }
                         
-                        ThreeCardShowView(cardID: drawCardsNum[2], imageName: futureCardName, message: "Future",  isReversed: futurePosition, isTimeOn: isTimeOn)
+                        ThreeCardShowView(cardID: drawCardsNum[2], imageName: futureCardName, message: "Future",  isReversed: futurePosition, isTimeOn: isTimeOn, allowShowCardSheet: futureallowShowCardSheet)
                             .dropDestination(for: String.self) { items, location in
                                 withAnimation {
                                     for item in items {
@@ -80,6 +87,7 @@ struct ThreeCardSpreadView: View {
                                 }
                                 futureCardName = cardDatas[drawCardsNum[2]].imageName
                                 futurePosition = Bool.random()
+                                futureallowShowCardSheet.toggle()
                                 return true
                             }
                     }
@@ -91,8 +99,13 @@ struct ThreeCardSpreadView: View {
                             pastCardName = ""
                             presentCardName = ""
                             futureCardName = ""
+                            
                             drawCardsNum = [Int](1...78).shuffled()
                             drawCardsName = CardData().getData().map({ $0.imageName }).shuffled()
+                            
+                            pastallowShowCardSheet = false
+                            presentallowShowCardSheet = false
+                            futureallowShowCardSheet = false
                         }
                     } label: {
                         ThreeCardButtonLabel(message: "Shuffle", iconName: "repeat")
@@ -170,6 +183,7 @@ struct ThreeCardShowView: View {
     let message: String
     let isReversed: Bool
     let isTimeOn: Bool
+    let allowShowCardSheet: Bool
     
     @State var showCardSheet: Bool = false
     
@@ -192,7 +206,9 @@ struct ThreeCardShowView: View {
                     .rotationEffect(isReversed ? .degrees(180) : .degrees(0))
                     .draggable(imageName)
                     .onTapGesture {
-                        showCardSheet.toggle()
+                        if allowShowCardSheet {
+                            showCardSheet.toggle()
+                        }
                     }
                 
                 Text(isTimeOn ? message : "")
