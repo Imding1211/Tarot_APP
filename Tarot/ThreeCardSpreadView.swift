@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ThreeCardSpreadView: View {
     
-    @Environment(\.colorScheme) var colorScheme
-    
     @State var drawCardsName: [String] = CardData().getData().map({ $0.imageName }).shuffled()
     @State var drawCardsNum: [Int] = [Int](1...78).shuffled()
     @State var cardDatas: [CardInfo] = CardData().getData()
@@ -37,20 +35,6 @@ struct ThreeCardSpreadView: View {
                     .ignoresSafeArea()
                 
                 VStack {
-                    HStack {
-                        Spacer()
-                        
-                        Button {
-                            withAnimation {
-                                isTimeOn.toggle()
-                            }
-                        } label: {
-                            Image(systemName: "repeat")
-                                .foregroundColor(Color.black)
-                                .padding()
-                        }
-                    }
-                    
                     HStack {
                         ThreeCardShowView(cardID: drawCardsNum[0], imageName: pastCardName, message: "Past", isReversed: pastPosition, isTimeOn: isTimeOn, allowShowCardSheet: pastallowShowCardSheet)
                             .dropDestination(for: String.self) { items, location in
@@ -115,9 +99,17 @@ struct ThreeCardSpreadView: View {
                 }
             }
             .navigationTitle("3 Card Spread")
+            .toolbar {
+                ToolbarItem (placement: .topBarTrailing) {
+                    Image(systemName: "repeat")
+                        .foregroundColor(Color("MainColor"))
+                        .padding()
+                        .onTapGesture {withAnimation {isTimeOn.toggle()}}
+                }
+            }
         }
         .accentColor(Color("MainColor"))
-    } 
+    }
 }
 
 struct ThreeCardDrawView: View {
@@ -205,11 +197,7 @@ struct ThreeCardShowView: View {
                     .frame(width: 90, height: 150)
                     .rotationEffect(isReversed ? .degrees(180) : .degrees(0))
                     .draggable(imageName)
-                    .onTapGesture {
-                        if allowShowCardSheet {
-                            showCardSheet.toggle()
-                        }
-                    }
+                    .onTapGesture {if allowShowCardSheet {showCardSheet.toggle()}}
                 
                 Text(isTimeOn ? message : "")
                     .font(.title3)

@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct MenuView: View {
-    
-    @Environment(\.colorScheme) var colorScheme
-    
+
     var body: some View {
         
         NavigationStack {
@@ -34,7 +32,7 @@ struct MenuView: View {
                     NavigationLink {
                         StarSpreadView()
                     } label: {
-                        MenuLinkLabel(message: "6 Card Spread")
+                        MenuLinkLabel(message: "Star Spread")
                     }
                     
                     NavigationLink {

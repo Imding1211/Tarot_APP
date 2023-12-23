@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct DailyCardView: View {
-    
-    @Environment(\.colorScheme) var colorScheme
 
     @State var cardState: Int = 0
     @State var cardIndex: Int = Int.random(in: 1...156)
@@ -30,11 +28,9 @@ struct DailyCardView: View {
                     
                     Button {
                         if cardState == 0 {
-                            turnCard()
+                            DailyturnCard()
                             
-                            DispatchQueue.main.asyncAfter(deadline:  .now() + 0.5) {
-                                showCardSheet.toggle()
-                            }
+                            DispatchQueue.main.asyncAfter(deadline:  .now() + 0.5) {showCardSheet.toggle()}
                         }
                         else {
                             showCardSheet.toggle()
@@ -63,7 +59,7 @@ struct DailyCardView: View {
                         Spacer()
                         
                         Button {
-                            turnCard()
+                            DailyturnCard()
                         } label: {
                             DailyCardButtonLabel(message: "Draw", iconName: "arrow.triangle.2.circlepath")
                         }
@@ -74,7 +70,7 @@ struct DailyCardView: View {
                             shuffleCard()
                             
                             if cardState != 0 {
-                                turnCard()
+                                DailyturnCard()
                             }
                             withAnimation(.default) {
                                 shuffleCardDegrees += 360
@@ -98,7 +94,7 @@ struct DailyCardView: View {
         .accentColor(Color("MainColor"))
     }
     
-    func turnCard() {
+    func DailyturnCard() {
         
         if cardState == 0 {
             cardState = cardIndex

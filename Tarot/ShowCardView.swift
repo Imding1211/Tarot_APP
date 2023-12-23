@@ -10,7 +10,6 @@ import SwiftUI
 struct ShowCardView: View {
     
     @Environment(\.presentationMode) var presentationMode
-    @Environment(\.colorScheme) var colorScheme
     
     @State var cardDatas: [CardInfo] = CardData().getData()
     
@@ -91,6 +90,7 @@ struct ShowCardView: View {
             .foregroundColor(Color.black)
             .padding()
         }
+        .accentColor(Color("MainColor"))
     }
 }
 
