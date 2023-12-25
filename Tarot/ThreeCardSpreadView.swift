@@ -35,8 +35,10 @@ struct ThreeCardSpreadView: View {
                     .ignoresSafeArea()
                 
                 VStack {
+                    Spacer()
+                    
                     HStack {
-                        ThreeCardShowView(cardID: drawCardsNum[0], imageName: pastCardName, message: "Past", isReversed: pastPosition, isTimeOn: isTimeOn, allowShowCardSheet: pastallowShowCardSheet)
+                        ThreeCardShowView(cardID: drawCardsNum[0], imageName: pastCardName, message: "過去", isReversed: pastPosition, isTimeOn: isTimeOn, allowShowCardSheet: pastallowShowCardSheet)
                             .dropDestination(for: String.self) { items, location in
                                 withAnimation {
                                     for item in items {
@@ -49,7 +51,7 @@ struct ThreeCardSpreadView: View {
                                 return true
                             }
                         
-                        ThreeCardShowView(cardID: drawCardsNum[1], imageName: presentCardName, message: "Present", isReversed: presentPosition, isTimeOn: isTimeOn, allowShowCardSheet: presentallowShowCardSheet)
+                        ThreeCardShowView(cardID: drawCardsNum[1], imageName: presentCardName, message: "現在", isReversed: presentPosition, isTimeOn: isTimeOn, allowShowCardSheet: presentallowShowCardSheet)
                             .dropDestination(for: String.self) { items, location in
                                 withAnimation {
                                     for item in items {
@@ -62,7 +64,7 @@ struct ThreeCardSpreadView: View {
                                 return true
                             }
                         
-                        ThreeCardShowView(cardID: drawCardsNum[2], imageName: futureCardName, message: "Future",  isReversed: futurePosition, isTimeOn: isTimeOn, allowShowCardSheet: futureallowShowCardSheet)
+                        ThreeCardShowView(cardID: drawCardsNum[2], imageName: futureCardName, message: "未來",  isReversed: futurePosition, isTimeOn: isTimeOn, allowShowCardSheet: futureallowShowCardSheet)
                             .dropDestination(for: String.self) { items, location in
                                 withAnimation {
                                     for item in items {
@@ -76,7 +78,11 @@ struct ThreeCardSpreadView: View {
                             }
                     }
                     
+                    Spacer()
+                    
                     ThreeCardDrawView(tasks: drawCardsName)
+                    
+                    Spacer()
 
                     Button {
                         withAnimation {
@@ -92,13 +98,13 @@ struct ThreeCardSpreadView: View {
                             futureallowShowCardSheet = false
                         }
                     } label: {
-                        ThreeCardButtonLabel(message: "Shuffle", iconName: "repeat")
+                        ThreeCardButtonLabel(message: "洗牌", iconName: "repeat")
                     }
                     
                     Spacer()
                 }
             }
-            .navigationTitle("3 Card Spread")
+            .navigationTitle("時間之流占卜")
             .toolbar {
                 ToolbarItem (placement: .topBarTrailing) {
                     Image(systemName: "repeat")

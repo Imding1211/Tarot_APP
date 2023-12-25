@@ -20,25 +20,25 @@ struct MenuView: View {
                     NavigationLink {
                         DailyCardView()
                     } label: {
-                        MenuLinkLabel(message: "Daily Tarot Draw")
+                        MenuLinkLabel(message: "每日運勢占卜")
                     }
                     
                     NavigationLink {
                         ThreeCardSpreadView()
                     } label: {
-                        MenuLinkLabel(message: "3 Card Spread")
+                        MenuLinkLabel(message: "時間之流占卜")
                     }
                     
                     NavigationLink {
                         StarSpreadView()
                     } label: {
-                        MenuLinkLabel(message: "Star Spread")
+                        MenuLinkLabel(message: "六芒星占卜")
                     }
                     
                     NavigationLink {
                         SearchCardView()
                     } label: {
-                        MenuLinkLabel(message: "Serch Card")
+                        MenuLinkLabel(message: "塔羅牌搜尋")
                     }
                 }
                 .padding()

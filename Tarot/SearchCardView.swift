@@ -118,7 +118,7 @@ struct SearchCardView: View {
                 }
                 .searchable(text: $searchCard)
             }
-            .navigationTitle("Search Card")
+            .navigationTitle("塔羅牌搜尋")
         }
         .accentColor(Color("MainColor"))
     }

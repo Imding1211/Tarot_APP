@@ -9,11 +9,11 @@ import SwiftUI
 
 struct StarSpreadView: View {
     
-    @State var drawCardsName: [String] = CardData().getData().map({ $0.imageName }).shuffled()
     @State var drawCardsNum: [Int] = [Int](1...78).shuffled()
     @State var cardDatas: [CardInfo] = CardData().getData()
     
     @State var isTimeOn: Bool = true
+    @State var isShuffle: Bool = true
     
     @State var isTurnPresent: Bool = false
     @State var isTurnObstacles: Bool = false
@@ -31,25 +31,27 @@ struct StarSpreadView: View {
                     .ignoresSafeArea()
                 
                 VStack {                    
+                    Spacer()
+                    
                     HStack {
                         VStack {
-                            StarShowView(cardID: drawCardsNum[0], imageName: cardDatas[drawCardsNum[0]].imageName, message: "現在", isTimeOn: isTimeOn, isTurn: $isTurnPresent)
+                            StarShowView(cardID: drawCardsNum[0], imageName: cardDatas[drawCardsNum[0]].imageName, message: "現在", isTimeOn: isTimeOn, isTurn: $isTurnPresent, isShuffle: $isShuffle)
                             
-                            StarShowView(cardID: drawCardsNum[1], imageName: cardDatas[drawCardsNum[1]].imageName, message: "主要障礙", isTimeOn: isTimeOn, isTurn: $isTurnObstacles)
+                            StarShowView(cardID: drawCardsNum[1], imageName: cardDatas[drawCardsNum[1]].imageName, message: "主要障礙", isTimeOn: isTimeOn, isTurn: $isTurnObstacles, isShuffle: $isShuffle)
                         }
                         
                         VStack {
-                            StarShowView(cardID: drawCardsNum[2], imageName: cardDatas[drawCardsNum[2]].imageName, message: "建議", isTimeOn: isTimeOn, isTurn: $isTurnSuggestion)
+                            StarShowView(cardID: drawCardsNum[2], imageName: cardDatas[drawCardsNum[2]].imageName, message: "建議", isTimeOn: isTimeOn, isTurn: $isTurnSuggestion, isShuffle: $isShuffle)
                             
-                            StarShowView(cardID: drawCardsNum[3], imageName: cardDatas[drawCardsNum[3]].imageName, message: "結論", isTimeOn: isTimeOn, isTurn: $isTurnConclusion)
+                            StarShowView(cardID: drawCardsNum[3], imageName: cardDatas[drawCardsNum[3]].imageName, message: "結論", isTimeOn: isTimeOn, isTurn: $isTurnConclusion, isShuffle: $isShuffle)
                             
-                            StarShowView(cardID: drawCardsNum[4], imageName: cardDatas[drawCardsNum[4]].imageName, message: "過去", isTimeOn: isTimeOn, isTurn: $isTurnPast)
+                            StarShowView(cardID: drawCardsNum[4], imageName: cardDatas[drawCardsNum[4]].imageName, message: "過去", isTimeOn: isTimeOn, isTurn: $isTurnPast, isShuffle: $isShuffle)
                         }
                         
                         VStack {
-                            StarShowView(cardID: drawCardsNum[5], imageName: cardDatas[drawCardsNum[5]].imageName, message: "未來", isTimeOn: isTimeOn, isTurn: $isTurnFuture)
+                            StarShowView(cardID: drawCardsNum[5], imageName: cardDatas[drawCardsNum[5]].imageName, message: "未來", isTimeOn: isTimeOn, isTurn: $isTurnFuture, isShuffle: $isShuffle)
                             
-                            StarShowView(cardID: drawCardsNum[6], imageName: cardDatas[drawCardsNum[6]].imageName, message: "環境因素", isTimeOn: isTimeOn, isTurn: $isTurnenvirnmental)
+                            StarShowView(cardID: drawCardsNum[6], imageName: cardDatas[drawCardsNum[6]].imageName, message: "環境因素", isTimeOn: isTimeOn, isTurn: $isTurnenvirnmental, isShuffle: $isShuffle)
                         }
                     }
                     
@@ -66,16 +68,19 @@ struct StarSpreadView: View {
                             isTurnenvirnmental = false
                             
                             drawCardsNum = [Int](1...78).shuffled()
-                            drawCardsName = CardData().getData().map({ $0.imageName }).shuffled()
+                            
+                            isShuffle = false
                         }
+                        
+                        DispatchQueue.main.asyncAfter(deadline:  .now() + 0.5) {withAnimation{isShuffle = true}}
                     } label: {
-                        ThreeCardButtonLabel(message: "Shuffle", iconName: "repeat")
+                        ThreeCardButtonLabel(message: "洗牌", iconName: "repeat")
                     }
                     
                     Spacer()
                 }
             }
-            .navigationTitle("Star Spread")
+            .navigationTitle("六芒星占卜")
             .toolbar {
                 ToolbarItem (placement: .topBarTrailing) {
                     Image(systemName: "repeat")
@@ -97,6 +102,7 @@ struct StarShowView: View {
     let isTimeOn: Bool
     
     @Binding var isTurn: Bool
+    @Binding var isShuffle: Bool
     
     @State var isReversed: Bool = false
     @State var showCardSheet: Bool = false
@@ -118,6 +124,7 @@ struct StarShowView: View {
                     .shadow(color: .white, radius: 5)
                     .frame(width: 90, height: 100)
                     .rotationEffect(isReversed ? .degrees(180) : .degrees(0))
+                    .opacity(isShuffle ? 1.0 : 0.0)
                     .onTapGesture {
                         if isTurn {
                             showCardSheet.toggle()

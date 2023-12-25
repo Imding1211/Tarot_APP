@@ -28,14 +28,13 @@ struct DailyCardView: View {
                     
                     Button {
                         if cardState == 0 {
-                            DailyturnCard()
+                            cardState = cardIndex
                             
-                            DispatchQueue.main.asyncAfter(deadline:  .now() + 0.5) {showCardSheet.toggle()}
+                            withAnimation {turnCardDegrees += 180}
                         }
                         else {
                             showCardSheet.toggle()
                         }
-
                     } label: {
                         if cardState == 0 {
                             DailyCardImage(imageName: cardDatas[cardState].imageName)
@@ -59,25 +58,13 @@ struct DailyCardView: View {
                         Spacer()
                         
                         Button {
-                            DailyturnCard()
-                        } label: {
-                            DailyCardButtonLabel(message: "Draw", iconName: "arrow.triangle.2.circlepath")
-                        }
-                        
-                        Spacer()
-                        
-                        Button {
                             shuffleCard()
                             
-                            if cardState != 0 {
-                                DailyturnCard()
-                            }
-                            withAnimation(.default) {
-                                shuffleCardDegrees += 360
-                            }
+                            if cardState != 0 {DailyturnCard()}
                             
+                            withAnimation(.default) {shuffleCardDegrees += 360}
                         } label: {
-                            DailyCardButtonLabel(message: "Shuffle", iconName: "repeat")
+                            DailyCardButtonLabel(message: "洗牌", iconName: "repeat")
                         }
                         
                         Spacer()
@@ -86,7 +73,7 @@ struct DailyCardView: View {
                     Spacer()
                 }
             }
-            .navigationTitle("Daily Tarot Draw")
+            .navigationTitle("每日運勢占卜")
             .sheet(isPresented: $showCardSheet) {
                 ShowCardView(cardState: cardState > 78 ? cardState-78 : cardState, isReversed: cardState > 78 ? true : false)
             }
@@ -95,32 +82,25 @@ struct DailyCardView: View {
     }
     
     func DailyturnCard() {
-        
         if cardState == 0 {
             cardState = cardIndex
-            withAnimation {
-                turnCardDegrees += 180
-            }
+            
+            withAnimation {turnCardDegrees += 180}
         }
         else {
             cardState = 0
-            withAnimation {
-                turnCardDegrees -= 180
-            }
+            
+            withAnimation {turnCardDegrees -= 180}
         }
-        
     }
     
     func shuffleCard() {
-        
         cardIndex = Int.random(in: 1...156)
-        
     }
-    
 }
 
 struct DailyCardTitle: View {
-    
+
     let message: String
     
     var body: some View {

@@ -14,7 +14,7 @@ struct CardData {
         return [
             CardInfo(cardID: 0,
                      cardType: "",
-                     englishName: "Draw Card",
+                     englishName: "抽牌",
                      chineseName: "卡背",
                      imageName: "CardBacks",
                      keyWordUpright: "",
